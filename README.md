@@ -41,7 +41,7 @@ npm install -g json-server
 
 ## Java SDK Uyumlu Sürüm
 
-Bu projenin Java SDK 11 ile uyumlu çalıştığı doğrulandı.
+Bu projenin Mobil uygulaması için Java SDK 17.0.10 e ihtiyacı vardır
 
 ## NativeScript
 
