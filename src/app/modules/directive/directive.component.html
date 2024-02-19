@@ -1,0 +1,57 @@
+<h1>Angular Directives Nedir?</h1>
+<p>Angular Directives, Angular uygulamalarında HTML öğelerine veya bileşenlerine özel davranışlar eklemenizi sağlayan
+  özel komutlardır.</p>
+
+<h4>Ne İşe Yarar?</h4>
+<ul>
+  <li>HTML kodunuza dinamik özellikler eklemenizi sağlar.</li>
+  <li>Veri bağlama, döngüler oluşturma, koşullu görüntüleme gibi işlevselliği artırır.</li>
+  <li>Uygulamanızın davranışını yönetmenizi sağlar.</li>
+  <li>Kodunuzun daha sürdürülebilir ve düzenli olmasına yardımcı olur.</li>
+</ul>
+
+<h4>Avantajları:</h4>
+<ul>
+  <li>HTML'e özel işlevselliği ekleyerek daha modüler ve temiz bir kod elde etmenizi sağlar.</li>
+  <li>Veri bağlama gibi özelliklerle uygulamanızı daha etkileşimli hale getirir.</li>
+</ul>
+
+<h4>Dezavantajları:</h4>
+<ul>
+  <li>Angular Directives'i kullanmak, daha fazla öğrenme eğrisi gerektirebilir.</li>
+  <li>HTML içinde doğrudan yazılan direktifler, karmaşıklığı artırabilir.</li>
+</ul>
+
+<h4>Nerelerde ve Nasıl Kullanılmalıdır?</h4>
+<ul>
+  <li>Veri listelerini görüntülemek için *ngFor kullanılabilir.</li>
+  <li>Koşullu görüntüleme için *ngIf kullanılabilir.</li>
+  <li>Form elemanlarına çift yönlü veri bağlama için [(ngModel)] kullanılabilir.</li>
+  <li>Dinamik sınıflar eklemek için [ngClass] kullanılabilir.</li>
+  <li>Stil özelliklerini dinamik olarak yönetmek için [ngStyle] kullanılabilir.</li>
+</ul>
+
+<h4>Örnek Kod:</h4>
+<div *ngIf="isUserLoggedIn">
+  <p>Kullanıcı giriş yaptı!</p>
+</div>
+<br>
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+<br>
+
+<input [(ngModel)]="username" placeholder="Kullanıcı Adı">
+<p>Kullanıcı Adı: {{ username }}</p>
+<br>
+
+<div [ngClass]="{ 'active': isActive, 'disabled': isDisabled }">Bu bir div elementidir.</div>
+<br>
+
+<div [ngStyle]="{ 'color': textColor, 'font-size': fontSize + 'px' }">Bu bir div elementidir.</div>
+
+<br>
+<p appDirective>
+  Hover over me to see the highlight directive in action!
+</p>

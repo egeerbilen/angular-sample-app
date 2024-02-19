@@ -1,0 +1,40 @@
+<h4>Angular Observable Nedir?</h4>
+<p>Angular'da Observable, asenkron veri akışını temsil eden bir nesnedir.</p>
+<p>Observable'lar, HTTP istekleri, eventler ve durum yönetimi gibi birçok alanda kullanılabilirler.</p>
+<p>HTTP istekleri için:</p>
+<ul>
+  <li>Sunucudan veri almak için Observable'lar kullanılır.</li>
+</ul>
+<p>Event yönetimi için:</p>
+<ul>
+  <li>Kullanıcı etkileşimleri veya DOM olayları Observable'larla dinlenebilir.</li>
+</ul>
+<p>Durum yönetimi için:</p>
+<ul>
+  <li>Uygulama durumunu yönetmek ve veri akışını sağlamak için Observable'lar kullanılabilir.</li>
+</ul>
+<p>Form işlemleri için:</p>
+<ul>
+  <li>Form verileri Observable'lar aracılığıyla işlenebilir.</li>
+</ul>
+<p>.next()</p>
+<ul>
+  <li>
+    metodu, bir Observable içindeki veriyi değiştirir ve bu yeni veriyi tüm abonelere ileterek onları
+    günceller.
+  </li>
+</ul>
+<p>Observer</p>
+<ul>
+  <li>
+    bir Observable'dan gelen değerleri izleyen ve bunlara tepki veren bir yapıdır. Observable, veri akışını temsil
+    ederken, Observer bu veri akışını dinler ve bu akıştan gelen değerlere tepki verir.
+  </li>
+</ul>
+
+
+
+<b>Örnekler: </b> (Buton çıktıları konsolda) <br><br>
+<button class="btn btn-primary" (click)="observablesErrors()">Observables Errors</button><br><br>
+<button class="btn btn-primary" (click)="observablesCompletion()">Observables Completion</button><br><br>
+<button class="btn btn-primary" (click)="observablesNext()">Observables Next</button>

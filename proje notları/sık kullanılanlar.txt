@@ -1,0 +1,4 @@
+json-server --watch db.json
+npm run cleandai-and-build
+npm start
+npm run lintqf

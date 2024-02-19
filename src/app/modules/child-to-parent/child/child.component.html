@@ -1,0 +1,16 @@
+<h4>
+  Child To Parent
+</h4>
+<br>
+<button class="btn btn-primary" (click)="emitEvent()">Child To Parent</button>
+<br>
+<br>
+<b>
+  Child: <input type="text" (input)="updateParent($event.target)" />
+</b>
+
+<!-- input olayı, bir kullanıcı bir input alanına herhangi bir değer yazdığında 
+  tetiklenir. Bu genellikle anlık olarak her karakter girildiğinde gerçekleşir. -->
+
+<!-- change olayı ise, input alanındaki değer değiştiğinde ve odak başka bir alana 
+  kaydığında (yani kullanıcı input alanından başka bir yere tıkladığında ya da klavyede Enter tuşuna bastığında) tetiklenir. -->

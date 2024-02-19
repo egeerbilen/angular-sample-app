@@ -1,0 +1,14 @@
+# Settings (Ayarlar) Katmanı
+
+## Amaç
+Bu katman, genellikle uygulamanın yapılandırma bilgilerini ve ayarlarını barındıran bir yapıdır. Uygulamanın genel özelliklerini ve yapılandırma değişkenlerini içerir.
+
+## İşlevi
+- **Farklı Ortamlar için Yapılandırma Değişkenleri:** Örneğin, geliştirme, üretim, test ortamları için farklı API URL'leri gibi değişkenleri içerebilir.
+- **Uygulama Genelinde Kullanılan Özelliklerin veya Davranışların Yapılandırma Bilgileri:** Dil tercihleri, tema seçenekleri gibi uygulama genelinde kullanılan özelliklerin yapılandırma bilgilerini içerebilir.
+- **Harici Servislerle İletişim için Kullanılan Bilgiler:** API anahtarları, kimlik bilgileri gibi harici servislerle iletişim kurmak için kullanılan bilgileri içerebilir.
+- **Kullanıcı Tercihlerini Saklama:** Kullanıcı tarafından tercih edilen özel ayarları veya seçenekleri saklayabilir (örneğin, tema veya dil tercihi).
+- **Veri Depolama Yönetimi ve Yapılandırma Bilgileri:** Yerel depolama veya diğer veri saklama mekanizmalarıyla ilgili veri depolama yönetimini ve yapılandırma bilgilerini içerebilir.
+
+## Kullanım Alanı
+Settings Katmanı, genellikle uygulamanın genel yapılandırma bilgilerini, değişkenlerini ve ayarlarını barındırır. Bu katman, uygulamanın farklı bölümlerinde veya modüllerinde kullanılan yapılandırma bilgilerini sağlar ve genel yapılandırma yönetimini destekler.

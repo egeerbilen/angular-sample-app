@@ -1,0 +1,29 @@
+<h4>ngOnDestroy</h4>
+<ul>
+  <li><strong>Yaşam Döngüsü Kancası:</strong> ngOnDestroy, bir Angular bileşeni yok edilirken çalıştırılan bir metoddur.
+  </li>
+  <li>
+    <strong>Temizleme İşlemleri İçin Kullanılır:</strong> Genellikle, bir bileşenin işlevselliğinden ayrılması gereken
+    temizleme işlemleri bu metodda
+    yapılır. Aboneliklerin veya dinleyicilerin kaldırılması, bellek yönetimi için kaynakların serbest bırakılması gibi
+    işlemler burada
+    gerçekleştirilir.
+  </li>
+  <li>
+    <strong>Bileşenin Ömrü Sonlandığında Çalışır:</strong> Bileşenin yok edilmesi anında, örneğin bir route değiştiğinde
+    veya bir bileşen yeniden
+    oluşturulduğunda, ngOnDestroy çalışır.
+  </li>
+  <li>
+    <strong>Kullanım Alanları:</strong> Genellikle aboneliklerin, zamanlayıcıların veya dış kaynakların (örneğin HTTP
+    istekleri gibi) temizlenmesi
+    için kullanılır.
+  </li>
+  <br>
+  <b>Önemli</b>
+  <li> Route observables için bunu sizin için hallediyor.</li>
+  <li>Ancak kendi observablleri eklerseniz, bunları kendiniz iptal etmelisiniz.</li>
+
+</ul>
+
+<strong>Not: örnek kodu konsolda görebilirsin</strong>

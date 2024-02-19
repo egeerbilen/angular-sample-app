@@ -1,0 +1,154 @@
+<h4>Angular Reactive Forms Nedir?</h4>
+
+<p>
+  Angular'da Reactive Forms, kullanıcıdan veri almak, form doğrulaması yapmak ve form verilerini işlemek için kullanılan bir özelliktir. Bu özellik,
+  Angular uygulamalarında form işlemlerini yönetmek için güçlü bir araç sunar. Reactive Forms, Template-Driven Forms ile karşılaştırıldığında daha
+  esnek, test edilebilir ve büyük ölçekli uygulamalarda daha iyi performans sunar.
+</p>
+
+<p>Reactive Forms'un bazı faydaları şunlardır:</p>
+
+<ul>
+  <li><strong>Daha İleri Düzey Kontrol:</strong> Reactive Forms, formdaki her bir alanı temsil eden form kontrolörlerini kullanır.</li>
+  <li><strong>RxJS Entegrasyonu:</strong> Reactive Forms, RxJS (Reactive Extensions for JavaScript) ile entegre olarak çalışır.</li>
+  <li><strong>Doğrulama ve Özelleştirme:</strong> Reactive Forms, form alanları için kapsamlı doğrulama kuralları belirlemenizi sağlar.</li>
+  <li><strong>Test Edilebilirlik:</strong> Reactive Forms, test edilmesi daha kolay olan bir yapı sunar.</li>
+</ul>
+
+<p>
+  Özetle, Reactive Forms, Angular'da form işlemlerini yönetmek ve form verileri üzerinde daha fazla kontrol sahibi olmak için kullanılan güçlü bir
+  özelliktir.
+</p>
+
+<p>
+  HTML de <b>for</b> özelliği, bir etiketin (label) hangi form elemanına bağlı olduğunu belirtir. Kullanıcı bu etikete tıkladığında veya ekran okuyucu
+  kullandığında, ilişkili form elemanı otomatik olarak odaklanır veya işaretlenir. Bu özellik, kullanıcı deneyimini iyileştirmek ve erişilebilirliği
+  artırmak için kullanılır. Özetle label a tıkladığında da input alanını seçebilir
+</p>
+<br /><br />
+<code>
+  &lt;label for="name"&gt;Adınız:&lt;/label&gt;<br />
+  &lt;input type="text" id="name" name="name"&gt;
+</code>
+
+<br /><br />
+
+<b>Örnek</b>
+
+<div class="wrapper">
+  <kendo-tabstrip>
+    <kendo-tabstrip-tab title="Örnek 1" [selected]="true">
+      <ng-template kendoTabContent>
+        <form [formGroup]="userForm" (ngSubmit)="userFormSubmit($event)" class="mt-4">
+          <div class="mb-3">
+            <label for="name" class="form-label">Adınız:</label>
+            <input formControlName="name" class="form-control" [ngClass]="{'is-invalid' : userForm.get('name')?.invalid}" />
+            <!-- invalid-feedback classı otomatik olarak yapıyor bu işi -->
+            <p class="invalid-feedback">Name alanı zorunlu</p>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-posta Adresiniz:</label>
+            <input
+              formControlName="email"
+              class="form-control {'is-invalid' : userForm.invalid }"
+              [ngClass]="{'is-invalid' : userForm.get('email')?.invalid }" />
+            <p class="invalid-feedback">Geçersiz mail</p>
+          </div>
+          <div formGroupName="job">
+            <!-- formGroup içinde formGroup kullanırsan html tarafında alt formgroup lara erişmek için formGroupName="job" gibi tanımlama yapmak zorundasın -->
+            <div class="mb-3">
+              <label for="company" class="form-label">Company:</label>
+              <input formControlName="company" class="form-control" [ngClass]="{'is-invalid' : userForm.get('job.company')?.invalid}" />
+              <p class="invalid-feedback">Company alanı zorunlu</p>
+            </div>
+
+            <div class="mb-3">
+              <label for="location" class="form-label">Location:</label>
+              <input formControlName="location" class="form-control" [ngClass]="{'is-invalid' : userForm.get('job.location')?.invalid}" />
+              <p class="invalid-feedback">Location alanı zorunlu</p>
+            </div>
+          </div>
+          <div formArrayName="personalty">
+            <!-- formGroup içinde formGroup kullanırsan html tarafında alt formgroup lara erişmek için formGroupName="job" gibi tanımlama yapmak zorundasın -->
+            <!-- bunu for ile de yapa bilirdik -->
+            <!--  
+      <div *ngFor="let item of items.controls; let i = index">
+           <div [formGroupName]="i">
+      -->
+            <div class="mb-3" formGroupName="0">
+              <label for="age" class="form-label">Age:</label>
+              <input formControlName="age" class="form-control" [ngClass]="{'is-invalid' : userForm.get('personalty.0.age')?.invalid}" />
+              <p class="invalid-feedback">Age alanı zorunlu</p>
+            </div>
+
+            <div class="mb-3" formGroupName="1">
+              <label for="height" class="form-label">Height:</label>
+              <input type="number" formControlName="height" class="form-control" [ngClass]="{'is-invalid' : userForm.get('personalty.1.height')?.invalid}" />
+              <p class="invalid-feedback">Height alanı zorunlu</p>
+            </div>
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid" style="margin-right: 15px">User Form Gönder</button>
+          <button type="reset" class="btn btn-primary">Reset</button>
+          <!-- eğer formu resetlemek istersen this.userForm.reset() diye bilirsin -->
+        </form>
+        <br />
+        <hr />
+        <h5>form Özellikleri</h5>
+        <br />
+        <button class="btn btn-primary" (click)="userFormSetValue()" style="margin-right: 20px">setValue</button>
+        <button class="btn btn-primary" (click)="userFormPatchValue()" style="margin-right: 20px">patchValue</button>
+        <button class="btn btn-primary" (click)="userFormValueChanges()">valueChanges start</button>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Örnek 2">
+      <ng-template kendoTabContent>
+        <button class="btn btn-primary" (click)="sampleGenerateForm()">Generate Form</button>
+        <div *ngIf="sampleGenerateFormItems">
+          <form [formGroup]="sampleGenerateFormItems" (ngSubmit)="sampleGenerateFormSubmit()">
+            <div class="mb-3">
+              <label for="className" class="form-label">Sınıf Adı:</label>
+              <input
+                formControlName="className"
+                class="form-control"
+                [ngClass]="{'is-invalid' : sampleGenerateFormItems.get('className')?.invalid}" />
+              <!-- invalid-feedback classı otomatik olarak yapıyor bu işi -->
+              <p class="invalid-feedback">className alanı zorunlu</p>
+            </div>
+            <div formGroupName="teacher">
+              <div class="mb-3">
+                <label for="name" class="form-label">Öğretmen adı:</label>
+                <input
+                  formControlName="name"
+                  class="form-control"
+                  [ngClass]="{'is-invalid' : sampleGenerateFormItems.get('teacher.name')?.invalid}" />
+                <!-- invalid-feedback classı otomatik olarak yapıyor bu işi -->
+                <p class="invalid-feedback">className alanı zorunlu</p>
+              </div>
+            </div>
+            <hr />
+            <div formArrayName="students">
+              <div *ngFor="let item of getSampleGenerateFormItems; let i = index" [formGroupName]="i">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Öğrenci adı:</label>
+                  <input
+                    formControlName="name"
+                    class="form-control"
+                    [ngClass]="{'is-invalid' : sampleGenerateFormItems.get('students.' + i + '.name')?.invalid}" />
+                  <!-- invalid-feedback classı otomatik olarak yapıyor bu işi -->
+                  <p class="invalid-feedback" *ngIf="sampleGenerateFormItems.get('students.' + i + '.name')?.errors?.['required']">
+                    Öğrenci alanı zorunlu
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-right: 15px">Sample Generate Formu Gönder</button>
+          </form>
+          <button (click)="managerAdd()" class="btn btn-primary">Müdür Ekle</button>
+          <button (click)="teacherPhysicalPropertieAdd()" class="btn btn-primary">Öğretmen fiziksel Özellik Ekle</button>
+          <button (click)="studentAdd()" class="btn btn-primary">Öğrenci Ekle</button>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+  </kendo-tabstrip>
+</div>

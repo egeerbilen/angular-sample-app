@@ -1,0 +1,50 @@
+<h2>ngDoCheck </h2>
+<ul>
+  <li>
+    <strong>Değişiklik İzleme:</strong> ngDoCheck, bileşenin içinde bulunan verilerdeki herhangi bir değişikliği
+    algılamak için kullanılır. Bu,
+    bileşenin içindeki veri veya durumun herhangi bir nedenle değiştiğinde tetiklenir.
+  </li>
+
+  <li>
+    <strong>Manuel Değişiklik Kontrolü:</strong> Angular'ın otomatik değişiklik algılama mekanizmasının dışında
+    özelleştirilmiş bir değişiklik izleme
+    imkanı sunar. Bunu kullanarak, özel bir şekilde değişiklikleri kontrol etmek, izlemek veya tepki göstermek
+    mümkündür.
+  </li>
+
+  <li>
+    <strong>Performans Optimize Etme:</strong> Bazı durumlarda, Angular'ın varsayılan değişiklik takibi işlemi gereksiz
+    olabilir. Bu durumlarda
+    ngDoCheck kullanarak belirli değişiklikleri izleyerek ve buna göre hareket ederek performansı artırabilirsiniz.
+  </li>
+
+  <li>
+    <strong>Kullanım Alanları:</strong>
+    <ul>
+      <li>
+        Derin nesne izleme: Nesne referansları değişmese bile, içlerindeki değerler değişebilir. ngDoCheck, bu gibi
+        durumları izlemek için
+        kullanılabilir.
+      </li>
+      <li>
+        İzinsiz veya dış etkilerle gelen değişiklikleri denetleme: Bazı durumlarda, dış kaynaklardan gelen veriler
+        değişebilir ve bunlar Angular'ın
+        normal değişiklik izleme süreci dışında olabilir. ngDoCheck, bu tür durumları ele almak için kullanılabilir.
+      </li>
+      <li>
+        Özel değişiklik durumlarını ele alma: Bazı bileşenlerde, Angular'ın varsayılan değişiklik tespit mekanizmasının
+        dışında farklı bir izleme
+        stratejisi gerekebilir.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div>
+  <h5>ngDoCheck Example</h5>
+  <p>Counter: {{ counter }}</p>
+</div>
+<button class="btn btn-primary" (click)="increment()">Increment Counter</button>
+<br>
+<input [(ngModel)]="text">

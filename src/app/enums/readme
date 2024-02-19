@@ -1,0 +1,12 @@
+# Enums (Sabitler) Katmanı
+
+## Amaç
+Bu katman, genellikle belirli bir veri tipi içindeki sabit değerleri veya seçenekleri içerir. Bu değerler, genellikle belirli bir veri alanında kullanılacak olan sabitler veya seçenekler olarak tanımlanır.
+
+## İşlevi
+- **Belirli Sabit Değerlerin Tanımlanması:** Örneğin, belirli bir veri tipi içinde kullanılacak olan sabit değerleri tanımlar (örneğin, haftanın günleri, durumlar, kategoriler gibi).
+- **Seçeneklerin Standartlaştırılması:** Belirli bir veri tipi içindeki seçeneklerin standartlaştırılması ve genel olarak erişilebilir olması için kullanılır.
+- **Veri Kontrolleri ve Doğrulamalar:** Belirli bir değerin belirli sabitler içinde olup olmadığını kontrol etmek veya geçerliliğini doğrulamak için kullanılabilir.
+
+## Kullanım Alanı
+Enums Katmanı, genellikle belirli bir veri tipi içindeki sabit değerleri veya seçenekleri içerir. Bu katman, sabitlerin standartlaştırılması ve belirli bir veri alanında kullanılan seçeneklerin kolay erişilebilir olmasını sağlar. Ayrıca, veri doğrulama veya kontrol işlemlerinde de kullanılabilir.

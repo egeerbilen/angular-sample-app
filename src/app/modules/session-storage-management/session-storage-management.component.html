@@ -1,0 +1,48 @@
+<h4>sessionStorage Nedir?</h4>
+<p>
+  <strong>sessionStorage</strong>, tarayıcıda geçici veri depolamak için kullanılan bir web API'dir. Oturum boyunca verileri saklar ve tarayıcı
+  penceresi ya da sekmesi kapatıldığında veriler silinir.
+</p>
+
+<h5>Ne İşe Yarar?</h5>
+<ul>
+  <li>Geçici veri depolamak için kullanılır.</li>
+  <li>Oturum boyunca verileri muhafaza eder.</li>
+  <li>Sayfa yenilendiğinde ya da tarayıcı kapatıldığında veriler silinir.</li>
+</ul>
+
+<h5>Kullanım Alanları:</h5>
+<ul>
+  <li>Form verilerini geçici olarak saklamak.</li>
+  <li>Oturum bilgilerini yönetmek.</li>
+  <li>Geçici ayarları depolamak.</li>
+  <li>Kullanıcı tercihlerini hatırlamak için kullanılabilir.</li>
+</ul>
+
+<h5>Kullanımı:</h5>
+<pre>
+  <code>
+// Veri kaydetme
+sessionStorage.setItem('anahtar', 'değer');
+
+// Veri alımı
+sessionStorage.getItem('anahtar');
+
+// Veri silme
+sessionStorage.removeItem('anahtar');
+  </code>
+</pre>
+
+<h5>Dikkat Edilmesi Gerekenler:</h5>
+<ul>
+  <li>Tarayıcı sekmesi/kapanmasıyla veriler silinir, kalıcı değildir.</li>
+  <li>Veri boyutu tarayıcıya bağlı olarak değişebilir ve genellikle 5MB civarındadır.</li>
+  <li>Hassas bilgileri saklamak için uygun değildir; güvenlik riskleri olabilir.</li>
+</ul>
+
+<div>
+  <h4>sessionStorage Örneği</h4>
+  <button class="btn btn-primary" (click)="setValue()" style="margin-right: 1rem;">sessionStorage'a Değer Ata</button>
+  <button class="btn btn-primary" (click)="getValue()">sessionStorage'dan Değer Al</button>
+  <p>sessionStorage'dan alınan değer: {{ storedValue }}</p>
+</div>

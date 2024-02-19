@@ -1,0 +1,127 @@
+<h4>Http Request</h4>
+
+<br />
+<h5>CRUD Nedir?</h5>
+<p>
+  CRUD, "Create, Read, Update, Delete" kelimelerinin baş harflerinden oluşan bir kısaltmadır ve genellikle veritabanı
+  işlemlerini tanımlamak için
+  kullanılır.
+</p>
+
+<h5>Create (Oluşturma)</h5>
+<p>Yeni veri oluşturma işlemidir. Yeni bir kayıt eklemek veya veritabanına yeni bir öğe eklemek gibi işlemleri ifade
+  eder.</p>
+
+<h5>Read (Okuma)</h5>
+<p>Varolan verileri okuma işlemidir. Veritabanından veri getirme veya mevcut kayıtları görüntüleme gibi işlemleri
+  içerir.</p>
+
+<h5>Update (Güncelleme)</h5>
+<p>Mevcut bir veriyi güncelleme işlemidir. Varolan bir kaydı değiştirme veya güncelleme, veriler üzerinde revizyon yapma
+  gibi işlemleri kapsar.</p>
+
+<h5>Delete (Silme)</h5>
+<p>Varolan bir veriyi silme işlemidir. Veritabanından bir kaydı kaldırma veya belirli bir öğeyi silme gibi işlemleri
+  ifade eder.</p>
+
+<h5>interceptor</h5>
+<p>Angular'daki interceptorlar, HTTP istekleri veya cevapları üzerinde genel işlemler yapmak için kullanılır:</p>
+<ul>
+  <li>Oturum yönetimi, token doğrulama gibi genel işlemleri uygulamak için kullanılabilir.</li>
+  <li>İstekleri manipüle etmek, örneğin, isteğe header eklemek, URL'i değiştirmek veya isteği iptal etmek mümkündür.
+  </li>
+  <li>Gelen cevapları ön işlemek, veriyi değiştirmek veya hataları işlemek gibi işlemler yapılabilir.</li>
+</ul>
+<br />
+
+<h5>JWT (JSON Web Token) Nedir?</h5>
+<b>Tanımı:</b>
+<p>JWT, JSON formatında bilgi depolayan bir token türüdür. Veri transferi sırasında güvenliği sağlamak için kullanılır.
+</p>
+
+<b>Yapısı:</b>
+<ul>
+  <li><strong>Header:</strong> Token tipini ve kullanılan algoritmayı içerir.</li>
+  <li><strong>Payload:</strong> Tokena eklenen veri parçalarını içerir (örneğin, kullanıcı kimliği, rolleri).</li>
+  <li><strong>Signature:</strong> Header ve payload'un imzalanmış bir şeklidir ve token'ın doğruluğunu sağlar.</li>
+</ul>
+
+<b>Kullanım Alanları:</b>
+<ul>
+  <li><strong>Kimlik Doğrulama (Authentication):</strong> Web uygulamalarında kullanıcıların kimliklerini doğrulamak
+    için sıklıkla kullanılır.</li>
+  <li><strong>API Yetkilendirme (Authorization):</strong> Kullanıcıların erişim izinlerini yönetmek için kullanılabilir.
+  </li>
+  <li><strong>Bilgi Transferi:</strong> Güvenli bir şekilde veri paylaşımı için de kullanılabilir.</li>
+</ul>
+
+<b>Avantajları:</b>
+<ul>
+  <li>Taşınabilir: İstemci ve sunucu arasında kolayca taşınabilir ve iletebilir.</li>
+  <li>Güvenli: İmzalanmış olduğundan, içeriği değiştirilemez.</li>
+  <li>Hafif: Veriler JSON formatında olduğu için hafif ve etkilidir.</li>
+</ul>
+<br />
+
+<h5>JWT Token Nasıl Çalışır</h5>
+<b>Güvenlik Düşünceleri:</b>
+<p>
+  JWT'ler güvenli olsa da, doğru şekilde kullanılmaları önemlidir. Güvenlik açıkları veya kötü niyetli kullanım
+  durumlarında, token'ın kullanımı risk
+  oluşturabilir.
+</p>
+
+<ol>
+  <li>
+    <strong>Başlık (Header):</strong> JWT'nin türünü ve kullandığı şifreleme algoritmasını belirtir. Genellikle "typ" ve
+    "alg" olmak üzere iki
+    parçadan oluşur.
+  </li>
+  <li>
+    <strong>Yük (Payload):</strong> İçerik olarak da adlandırılır ve JWT içinde taşınan verileri ve kullanıcıya özgü
+    bilgileri içerir. Üç farklı tipte
+    veri içerebilir: Registered claims, Public claims, Private claims.
+  </li>
+  <li>
+    <strong>İmza (Signature):</strong> Başlık ve yük kısımlarının birleştirilmiş ve belirli bir şifreleme algoritmasıyla
+    şifrelenmiş bir sürümüdür.
+    JWT'nin doğrulanmasına ve bütünlüğünün korunmasına yardımcı olur.
+  </li>
+</ol>
+<p><strong>JWT Nasıl Çalışır?</strong></p>
+<p>Kullanıcı kimlik doğrulaması yapmak istediğinde:</p>
+<ol>
+  <li>Sunucu bir JWT oluşturur ve kullanıcının kimliğini belirten bilgileri (claim'leri) içerir.</li>
+  <li>Oluşturulan JWT, kullanıcıya geri gönderilir.</li>
+  <li>Kullanıcı istek yaparken, bu JWT'yi her isteğin header veya başka bir güvenli yol ile gönderir.</li>
+  <li>Sunucu, gelen JWT'yi alır, imzasını doğrular ve içindeki bilgileri kullanarak kimlik doğrulamasını gerçekleştirir.
+  </li>
+</ol>
+<p>JWT'lerin güvenli saklanması ve iletilmesi önemlidir. Hassas bilgiler yerine, tanımlayıcı bilgilerin kullanılması
+  daha güvenli olabilir.</p>
+<br />
+<h5>Get</h5>
+<button class="btn btn-primary" (click)="getUsers()">Get Users</button><br /><br />
+<h5>Post</h5>
+<button class="btn btn-primary" (click)="addUser()">Add User</button><br /><br />
+<h5>Delete</h5>
+<button class="btn btn-primary" (click)="deleteUsers()">Delete User</button><br /><br />
+<h5>Update</h5>
+<button class="btn btn-primary" (click)="updateUsers()">Update User</button><br /><br />
+<h5>Create Token</h5>
+<button class="btn btn-primary" (click)="createToken()">Token Oluştur ve Kaydet (Login)</button>
+<br /><br />
+<h5>Remove Token</h5>
+<button class="btn btn-primary" (click)="removeToken()">Token'i Sil</button>
+<br /><br />
+<h5>Decode Token</h5>
+<button class="btn btn-primary" (click)="decodeToken()">Decode Token</button>
+<br /><br />
+<h5>loading Page</h5>
+<button class="btn btn-primary" (click)="loadingPage()">Loading Page</button>
+<p>Butona basınca 2 sn loading yazısı çıkacak</p>
+<b>Not:</b>
+<p>Loading sayfası aslında index html de olur bu sayede her modülde imp. edilmek zorunda kalınmaz</p>
+<div *ngIf="this.loadingPageService.isLoading" id="globalLoader" class="global-loader">
+  <h1>LOADING</h1>
+</div>

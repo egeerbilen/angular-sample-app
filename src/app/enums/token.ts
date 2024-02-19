@@ -1,0 +1,2 @@
+export const userToken =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXNlcm5hbWUiOiJleGFtcGxlVXNlciIsInJvbGVzIjpbImFkbWluIiwiZWRpdG9yIl19.WAmI0A72a1A0KtsrKG4dWReGK70EHUI1Otu7ctBuVUo';

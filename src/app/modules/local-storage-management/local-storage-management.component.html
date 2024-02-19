@@ -1,0 +1,51 @@
+<h4>Angular'da Local Storage Kullanımı</h4>
+
+<p>
+  Angular'da yerel depolama (local storage), tarayıcıda verilerin depolanmasına ve saklanmasına olanak sağlayan bir mekanizmadır. Angular
+  uygulamalarında local storage, kullanıcı verilerini tutmak, geçici verileri depolamak veya uygulama ayarlarını saklamak için sıkça kullanılır. İşte
+  Angular'da local storage kullanımı hakkında maddeler halinde bilgiler:
+</p>
+
+<ul>
+  <li>
+    <strong>Veri Saklama:</strong> Local storage, tarayıcıda anahtar-değer çiftleri olarak veri saklamak için kullanılır. Bu, kullanıcı tercihleri,
+    oturum bilgileri, sepet içeriği gibi verilerin tutulmasını sağlar.
+  </li>
+  <li>
+    <strong>Kalıcı Depolama:</strong> Tarayıcı kapatıldığında bile local storage'da saklanan veriler korunur. Bu, kullanıcıların bir sonraki oturumda
+    da aynı bilgilere erişebilmesini sağlar.
+  </li>
+  <li>
+    <strong>Basit Kullanım:</strong> Angular'da local storage kullanımı oldukça basittir. localStorage API'si kullanılarak veri depolanabilir,
+    alınabilir, güncellenebilir veya silinebilir.
+  </li>
+  <li>
+    <strong>Veri Türleri:</strong> Local storage, temel olarak metin veri türlerini depolayabilir. Ancak, veriler JSON formatına dönüştürülerek obje
+    olarak saklanabilir ve kullanılabilir.
+  </li>
+  <li>
+    <strong>Veri Sınırları:</strong> Tarayıcı bazında sınırlı bir depolama alanı sunar (genellikle 5-10 MB arası). Bu nedenle büyük veri miktarlarını
+    depolamak için uygun değildir.
+  </li>
+  <li>
+    <strong>Güvenlik Düşüncesi:</strong> Local storage, tarayıcıda çalıştığı için güvenlik riskleri taşır. Hassas bilgilerin (örneğin şifreler) local
+    storage'da saklanması güvenlik açısından risk oluşturabilir. Bu tür bilgiler için daha güvenli yöntemler tercih edilmelidir.
+  </li>
+  <li>
+    <strong>Kullanım Alanları:</strong> Oturum durumu, tercihlerin saklanması, önbellekleme, çevrimdışı kullanım ve küçük boyuttaki veri parçalarını
+    saklamak için kullanılabilir.
+  </li>
+</ul>
+
+<p>
+  Özetle, Angular'da local storage, tarayıcıda veri depolamak ve bu verilere erişmek için kullanılan kullanışlı bir mekanizmadır. Ancak, hassas
+  verilerin güvenliği ve sınırlı depolama alanı gibi bazı kısıtlamaları vardır. Bu nedenle, kullanım amacına uygun şekilde tercih edilmelidir.
+</p>
+
+<h5>Local Storage Example</h5>
+<button class="btn btn-primary" (click)="setValue()">Set Local Storage</button>
+<button class="btn btn-primary" (click)="getValue()">Get Local Storage</button>
+<button class="btn btn-primary" (click)="removeValue()">Remove Local Storage</button>
+<div *ngIf="localStorageValue">
+  <p>Value in Local Storage: {{ localStorageValue }}</p>
+</div>

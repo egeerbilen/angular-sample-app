@@ -1,0 +1,49 @@
+<div class="container">
+  <div *ngIf="windowWidth < 450 else tag">
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+
+      <kendo-treeview [nodes]="treeData" [hasChildren]="hasChildren" [children]="fetchChildren" textField="text"
+        kendoTreeViewSelectable [(selectedKeys)]="selectedKeys" [isExpanded]="isExpanded"
+        (collapse)="handleCollapse($event)" (expand)="handleExpand($event)"
+        (selectionChange)="onSelectionChange($event)">
+      </kendo-treeview>
+    </div>
+
+    <div class="row">
+      <div class="col-2"><button class="openbtn" (click)="openNav()">☰</button></div>
+      <div class="col-10">
+        <h1>Angular Sample Projects</h1>
+      </div>
+    </div>
+  </div>
+  <ng-template #tag>
+    <h1>Angular Sample Projects</h1>
+  </ng-template>
+</div>
+
+<!-- side-panel.component.html -->
+
+<div class="container">
+  <hr />
+  <!-- 
+  Angular'da routerLinkActiveOptions özelliği, bir bağlantının etkin olduğu durumu belirlemek için kullanılır.  
+  {exact: true} ifadesi, bağlantının tam olarak eşleştiği durumda (/path'e tam olarak eşleştiğinde) "active" sınıfının uygulanmasını sağlar. 
+  [routerLinkActiveOptions]="{exact: true}" 
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a> 
+  routerLinkActive, Angular'da kullanılan bir direktivdir. belirli bir router linki etkin olduğunda  belirtilen bir 
+  CSS sınıfını etkinleştirmek veya devre dışı bırakmak için kullanılır. 
+ -->
+  <div class="row">
+    <div class="col-4" *ngIf="windowWidth >= 450">
+      <kendo-treeview [nodes]="treeData" [hasChildren]="hasChildren" [children]="fetchChildren" textField="text"
+        kendoTreeViewSelectable [(selectedKeys)]="selectedKeys" [isExpanded]="isExpanded" style="color: white;"
+        (collapse)="handleCollapse($event)" (expand)="handleExpand($event)"
+        (selectionChange)="onSelectionChange($event)">
+      </kendo-treeview>
+    </div>
+    <div [class]="windowWidth < 450 ? ('col-12'):('col-8')">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

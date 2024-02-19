@@ -1,0 +1,18 @@
+<div>
+  <h3>NgOnChanges Kullanım Alanları ve Özellikleri:</h3>
+  <ul>
+    <li><strong>Değişiklik Takibi:</strong> Bileşenin girişlerindeki değişiklikleri izlemek ve tepki vermek.</li>
+    <li><strong>Lifecycle Hook:</strong> Angular bileşenlerinin yaşam döngüsü kancalarından biri.</li>
+    <li><strong>Performans Optimizasyonu:</strong> Veri değişikliklerini izleyerek performansı artırma.</li>
+    <li><strong>Dinamik Veri İşleme:</strong> Girişlerdeki değişikliklere yanıt olarak veri güncelleme veya işleme.</li>
+    <li><strong>Input Değişikliklerini İzleme:</strong> Girişlerdeki değişikliklere göre farklı işlemler yapma.</li>
+  </ul>
+  <p>
+    ng-on-changes, Angular'da veri alışverişi ve güncellemelerini yönetmek için önemli bir araçtır. Bu özellik,
+    bileşenlerin dinamik ve etkileşimli
+    olmasını sağlar, böylece kullanıcı deneyimini geliştirmekte kullanılabilir.
+  </p>
+</div>
+
+<app-ng-on-changes-child [inputValue]="exampleValue"></app-ng-on-changes-child>
+<input type="text" [(ngModel)]="exampleValue" />

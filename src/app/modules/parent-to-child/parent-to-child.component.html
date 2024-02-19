@@ -1,0 +1,14 @@
+<h4>
+  Parent To Child
+</h4>
+<hr>
+
+<div>
+  <b>Parent: </b>
+  <input type="text" [(ngModel)]="parentMessage" />
+  <app-child [message]="parentMessage" #childComponent></app-child>
+  <!-- #childComponent, Angular'da bileşenler arasında iletişim kurmak için kullanılan bir referans işaretleyicisidir.-->
+  <!-- Bu özellik, ebeveyn bileşen içindeki çocuk bileşene erişmek için kullanılır. Child componentdeki bir metodu çalıştırmak için #childComponent eklemek gerekli -->
+  <br>
+  <button class="btn btn-primary" (click)="triggerChildMethod()">Parent To Child</button>
+</div>

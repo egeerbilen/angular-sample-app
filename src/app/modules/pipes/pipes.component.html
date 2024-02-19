@@ -1,0 +1,82 @@
+<h4>Angular Pipe'lar</h4>
+<p>Angular'da pipe'lar, veriyi değiştirmek, biçimlendirmek ve göstermek için kullanılan işlevlerdir.</p>
+
+<h5><b>Genel Özellikler ve Kullanım Alanları:</b></h5>
+<ol>
+  <li><strong>Veri Biçimlendirme:</strong> Veriyi istenen formata dönüştürmek için kullanılır.</li>
+  <li><strong>Zaman Biçimlendirme:</strong> Tarih ve saat verilerini düzenleme veya belirli bir formata getirme işlemleri yapılabilir.</li>
+  <li>
+    <strong>Metin Biçimlendirme:</strong> Metin verilerini büyük harf, küçük harf veya belirli bir düzenleme ile gösterme işlemleri için
+    kullanılabilir.
+  </li>
+  <li><strong>Filtreleme:</strong> Belirli koşullara göre verileri filtrelemek için pipe'lar kullanılabilir.</li>
+  <li>
+    <strong>Dinamik Liste Gösterimi:</strong> Verileri sıralama, gruplama veya belirli bir düzene göre gösterme amaçlarıyla pipe'lar kullanılabilir.
+  </li>
+  <li><strong>Özelleştirme:</strong> Kendi özel pipe'larınızı oluşturarak belirli işlevleri yerine getirebilirsiniz.</li>
+</ol>
+
+<p>
+  Angular'da pipe'lar, HTML dosyalarında kullanılarak <code>|</code> sembolü ile belirtilir. Örneğin,<code>
+    {{ '{' }}{{ '{' }} make | uppercase {{ '}' }}{{ '}' }}
+  </code>
+  şeklinde kullanılabilirler. Bu örnek, <code>myData</code> değişkeninin içeriğini büyük harfle gösterir.
+</p>
+
+<p>
+  Pipe'lar, veri gösteriminde ve düzenlemesinde oldukça esnek ve kullanışlıdır. Veriyi istenilen formatta göstermek veya işlemek için Angular
+  uygulamalarında sıklıkla kullanılırlar.
+</p>
+
+<b>Örnekler</b>
+<br />
+uppercase: {{ 'hello world' | uppercase }}
+<!-- HELLO WORLD -->
+<br />
+lowercase: {{ 'HELLO WORLD' | lowercase }}
+<!-- hello world -->
+<br />
+
+titlecase: {{ 'hello world' | titlecase }}
+<!-- Hello World -->
+<br />
+
+slice: {{ 'hello world' | slice:0:5 }}
+<!-- hello -->
+<br />
+
+date: {{ dateTryPipe | date:'dd/MM/yyyy' }}
+<!-- 29/11/2023 -->
+<br />
+
+number: {{ 3.141592 | number:'1.2-3' }}
+<!-- 003.142 -->
+<br />
+
+percent: {{ 0.75 | percent }}
+<!-- 75% -->
+<br />
+
+currency: {{ 10.25 | currency:'EUR' }}
+<!-- €123.45 -->
+<br />
+
+slice & uppercase: {{ 'hello world' | slice:0:5 | uppercase}}
+<!-- €123.45 -->
+<br />
+
+string pipe transform pipe: {{ 'Hello world!' | stringTransform }}
+<!-- €123.45 -->
+<br />
+<br />
+
+<b>Filter Pipe Örneği</b>
+<br />
+
+<input type="text" [(ngModel)]="searchText" placeholder="Search..." />
+
+<ul>
+  <li *ngFor="let item of sampleItems | filterToDescription: searchText">
+    {{ item.description }}
+  </li>
+</ul>

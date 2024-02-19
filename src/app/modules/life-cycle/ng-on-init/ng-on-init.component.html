@@ -1,0 +1,42 @@
+<h2>ngOnInit</h2>
+
+<p>
+  <strong>Yaratılış Aşaması:</strong> Angular bileşeni oluşturulduğunda, bileşenin yaşam döngüsü başlar ve
+  <code>ngOnInit</code> bu aşamada devreye
+  girer.
+</p>
+
+<p>
+  <strong>İlklenme İşlemleri:</strong> Genellikle, bileşenin başlangıç durumunu belirlemek veya ilklemek için
+  kullanılır. Veri alma, API çağrıları
+  yapma, abonelik oluşturma gibi işlemler burada gerçekleştirilebilir.
+</p>
+
+<p>
+  <strong>Constructor'dan Sonra Çalışır:</strong> Angular bileşenlerinde <code>constructor</code>, sınıf
+  oluşturulduğunda çalışan bir JavaScript
+  özelliğidir. Ancak <code>ngOnInit</code>, bileşenin inşa edilmesi tamamlandıktan sonra çağrılır ve genellikle
+  <code>constructor</code> içerisinde
+  tam olarak hazır olmayan bileşen verileriyle çalışmak için kullanılır.
+</p>
+
+<p><strong>Sık Kullanım Alanları:</strong></p>
+<ul>
+  <li>Bileşenin başlangıç durumunu ayarlamak.</li>
+  <li>HTTP istekleri yapmak veya servislerden veri almak.</li>
+  <li>Yapılandırma ve başlangıç değerlerini ayarlamak için kullanılır.</li>
+  <li>Bileşen oluşturulduğunda çalıştırılacak işlemleri içeren özel fonksiyonları çağırmak.</li>
+</ul>
+
+<p>
+  <strong>Bileşen Yaşam Döngüsü:</strong> Angular bileşenlerinin yaşam döngüsünün bir parçasıdır ve bu döngü boyunca
+  yalnızca bir kez çağrılır.
+  Component'in inşa edildiği ilk aşamada çalışır.
+</p>
+
+<p>
+  Özetle, <code>ngOnInit</code> Angular'da bileşenin ilk kez yaratıldığı anda çalışan bir yöntemdir. Bileşenin
+  oluşturulduğu sırada yapılacak işlemler
+  için kullanılır ve genellikle bileşenin başlangıç durumunu ayarlamak veya ilgili verileri alma gibi işlemlerde tercih
+  edilir.
+</p>

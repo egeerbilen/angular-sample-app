@@ -1,0 +1,22 @@
+<h4>
+  Can Deactivate
+</h4>
+<hr>
+
+<h5>Angular CanDeactivate Özelliği</h5>
+
+<p>Angular'da <strong>CanDeactivate</strong>, bir bileşenin geçişini engellemek veya geçerli durumda tutmak için
+  kullanılır.</p>
+
+<p>Özellikle, kullanıcı etkileşimiyle bir sayfanın durumunu değiştirmenin öncesinde kullanılır:</p>
+
+<ul>
+  <li>Bir kullanıcı bir formu dolduruyorsa ve bu formu tamamlamadan sayfadan ayrılmak istiyorsa,
+    <strong>CanDeactivate</strong> sayfanın değiştirilmesini engelleyebilir ve kullanıcıya bir uyarı gösterebilir.
+  </li>
+  <li>Bu özellik, Angular tabanlı web uygulamalarında sayfa geçişlerini yönetmek ve kullanıcı deneyimini kontrol etmek
+    için kullanılır.</li>
+</ul>
+
+<p>Example Component</p>
+<button (click)="allowDeactivate()" class="btn btn-primary">Change Deactivation Status</button>

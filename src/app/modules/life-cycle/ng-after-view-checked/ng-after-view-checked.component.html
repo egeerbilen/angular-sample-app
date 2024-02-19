@@ -1,0 +1,21 @@
+<h5>ngAfterViewChecked</h5>
+<ul>
+  <li><strong>Kullanım Amacı:</strong> Bileşenin görünümünü kontrol ettikten sonra özel işlemler gerçekleştirmek için
+    kullanılır.</li>
+  <li>
+    <strong>Sıklığı:</strong> Herhangi bir bileşenin görünümü değiştiğinde ve yenilendiğinde çalışır. Bu, bir bileşenin
+    içeriğindeki değişikliklerin
+    kontrol edilmesi ve gerekirse ek işlemlerin yapılması için kullanışlıdır.
+  </li>
+  <li>
+    <strong>Değişiklik Algılama:</strong> Özellikle asenkron olaylar, veri değişiklikleri veya dışarıdan gelen veri
+    akışları gibi durumlarda,
+    bileşenin görünümünün yeniden kontrol edilmesi gerektiğinde kullanılabilir.
+  </li>
+  <li>
+    <strong>Optimizasyon:</strong> Dış veri kaynaklarından gelen güncellemeleri işlemek ve gerektiğinde bileşenin
+    yeniden boyutlandırılmasını veya
+    yeniden düzenlenmesini sağlamak için kullanılabilir.
+  </li>
+</ul>
+<button class="btn btn-primary" (click)="changeMessage()">Change Message</button>

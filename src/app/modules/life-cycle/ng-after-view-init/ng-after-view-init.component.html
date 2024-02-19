@@ -1,0 +1,35 @@
+<h4>ngAfterViewInit</h4>
+<br>
+<section>
+  <h4>Kullanım Amacı:</h4>
+  <ul>
+    <li>
+      Bileşenin view'i tamamen oluşturulduktan ve bileşenin içindeki view öğeleri hazır hale geldikten sonra bir eylem
+      gerçekleştirmek için kullanılır.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4>Nerelerde Kullanılır:</h4>
+  <ul>
+    <li>View'lerdeki değişiklikleri gözlemlemek ve bu değişikliklere göre bazı işlemler yapmak için kullanılabilir.</li>
+    <li>DOM işlemleri, veri bağlama vb. gibi view ile ilgili operasyonları gerçekleştirmek için kullanılabilir.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Kullanım Şekli:</h4>
+  <p><code>ngAfterViewInit</code> metodu, Angular bileşen sınıfında tanımlanır ve <code>AfterViewInit</code> arayüzünü
+    uygular.</p>
+</section>
+
+<section>
+  <h4>Dikkat Edilmesi Gerekenler:</h4>
+  <p>
+    <code>ngAfterViewInit</code> içerisinde ağır işlemler yapmak performans sorunlarına yol açabilir. Çünkü bu noktada
+    view hazır olmuş olsa da,
+    kullanıcıya henüz gösterilmemiş olabilir. Bu nedenle, bu kancayı kullanırken performansı etkileyebilecek işlemleri
+    yapmaktan kaçınılmalıdır.
+  </p>
+</section>

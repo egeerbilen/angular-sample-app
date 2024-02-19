@@ -1,0 +1,135 @@
+<h4>Ng Rrouter</h4>
+<hr />
+<h5>Angular Routing Açıklamaları</h5>
+
+<p>
+  <code>RouterModule.forRoot([])</code>: Bu ifade, boş bir dizi parametre alır. Bu, uygulamanızda herhangi bir
+  yönlendirme kurallarının olmadığı
+  anlamına gelir. Yani, bu şekilde kullanıldığında, uygulamanızda herhangi bir sayfa yönlendirmesi veya rotalama
+  yapılandırması yapılmamış demektir.
+  Genellikle, uygulamanın başlangıcında veya temel modülde kullanılır.
+</p>
+
+<p>
+  <code>RouterModule.forRoot(routes)</code>: Bu ifade, <code>routes</code> adında bir dizi parametre alır.
+  <code>routes</code>, uygulamanızın
+  rotalarını ve yönlendirmelerini içeren bir dizi objesidir. Burada belirtilen rotalar, belirli URL'lere göre hangi
+  bileşenin gösterileceğini
+  tanımlar. Yani, <code>routes</code> içindeki tanımlar, uygulamanızın hangi sayfalarının hangi URL'lere karşılık
+  geleceğini belirtir.
+</p>
+
+<p>
+  Kısacası, <code>RouterModule.forRoot([])</code> uygulamanın başlangıcında herhangi bir yönlendirme kuralı olmadığını
+  belirtirken,
+  <code>RouterModule.forRoot(routes)</code> ise belirli rotaları ve yönlendirmeleri tanımlar ve uygulamanın URL'lerini
+  nasıl işleyeceğini belirler.
+</p>
+
+<h5>Angular'da RouterModule.forChild() Kullanımı</h5>
+<p>
+  Angular'da <code>RouterModule.forChild([])</code> kullanımı, yönlendirme sistemi içinde kullanılan bir yapıdır.
+  <code>forChild</code> metodu
+  genellikle iç içe modüller ve alt modüllerde kullanılır. Büyük ölçekli uygulamalarda modüler bir yapı oluşturmak için
+  kullanışlıdır.
+</p>
+<p>
+  Bu metot, Angular'ın <code>RouterModule</code>'yu bir ana modül içinde değil, genellikle başka bir modül içinde
+  kullanır. Örneğin, bir ana uygulama
+  modülü ve bu ana modülün altında farklı özellikleri veya bileşenleri içeren alt modüller varsa,
+  <code>forChild([])</code> metodu bu alt modüllerin
+  yönlendirme tanımlamalarını yapmak için kullanılabilir.
+</p>
+
+<br />
+<a [routerLink]="['/urlGetId', 1, 'Ege']" [queryParams]="{ surname: 'Erbilen' }" fragment="section4">
+  get id, name & surname</a>
+<br /><br />
+<button class="btn btn-primary" (click)="redirectToUrl()">get id, name & surname</button>
+<br>
+<br>
+<h4>queryParams Handling Kullanımı</h4>
+<h5>preserve</h5>
+<p>"preserve": Bu değer, mevcut sorgu parametrelerinin korunmasını sağlar. Yani, mevcut sorgu parametreleri yeni
+  yönlendirmede de geçerli olur.</p>
+<b>Kod örneği</b>
+
+<pre>
+  <code [highlight]="preserveCode"></code>
+</pre>
+<pre>
+  <code>
+  </code>
+</pre>
+<b>Çıktı</b>
+<p>Mevcut URL: /urunler?kategori=elektronik&fiyat=ucuz</p>
+<p>Yeni URL: /urunler?kategori=telefon&fiyat=orta</p>
+<hr />
+<br />
+<h5>merge</h5>
+<p>
+  "merge": Bu değer, yeni sorgu parametrelerini mevcut olanlarla birleştirir. Yani, yeni parametreler eklenir veya
+  mevcut olanlar varsa güncellenir.
+</p>
+<pre>
+  <code [highlight]="mergeCode"></code>
+</pre>
+<p>Mevcut URL: /urunler?kategori=elektronik&fiyat=ucuz</p>
+<p>Yeni URL: /urunler?kategori=elektronik&fiyat=ucuz&sayfa=2</p>
+
+<hr />
+<br />
+<h5>empty</h5>
+<p>"empty": Bu değer, tüm mevcut sorgu parametrelerini temizler ve sadece yeni belirtilen sorgu parametrelerini
+  kullanır.</p>
+<pre>
+  <code [highlight]="emptyCode"></code> 
+</pre>
+<p>Mevcut URL: /urunler?kategori=elektronik&fiyat=ucuz</p>
+<p>Yeni URL: /urunler?sayfa=2</p>
+<hr />
+<br />
+<h4>relativeTo</h4>
+<p>Tabii, relativeTo özelliği, bir rota yoluna göre göre göre yönlendirme yaparken referans alınacak olan bileşeni
+  belirtir.</p>
+<p>Varsayalım ki bir UrunlerComponent içindeyiz ve bu bileşenin bir alt rotası olan UrunDetayComponent'e yönlendirme
+  yapmak istiyoruz.</p>
+
+<pre>
+  <code [highlight]="relativeTo"></code> 
+</pre>
+<hr />
+<h4>Angular'da Lazy Loading</h4>
+
+<p>
+  Lazy loading, Angular'da kullanılan bir tekniktir. Bu yöntem, uygulamanın modüllerini ve bileşenlerini gerektiği zaman
+  yüklemeyi sağlar. Başlangıçta
+  tüm kaynakları yüklemek yerine, kullanıcı ihtiyaç duyduğunda belirli modülleri veya bileşenleri yükleyerek performansı
+  artırır.
+</p>
+
+<p>Lazy loading, büyük ölçekli Angular uygulamalarında oldukça kullanışlıdır:</p>
+
+<ul>
+  <li>
+    <strong>Performansı artırır:</strong> Uygulamanın ilk yüklenme süresini azaltır ve sadece gerekli olan modülleri
+    istemciye gönderir. Bu, başlangıç
+    yükleme süresini minimize eder.
+  </li>
+  <li>
+    <strong>Daha iyi kullanıcı deneyimi:</strong> Yalnızca gerekli olan bileşenler yüklendiği için, kullanıcılar daha
+    hızlı bir şekilde ana içeriğe
+    erişebilirler. Bu da kullanıcı deneyimini iyileştirir.
+  </li>
+  <li><strong>Kod organizasyonu:</strong> Uygulamanın farklı bölümlerini modüller halinde düzenlemek, kodun daha iyi
+    organize edilmesini sağlar.</li>
+</ul>
+
+<p>
+  Lazy loading genellikle büyük projelerde kullanılır, özellikle büyük modüller veya sayfalar içeren uygulamalarda.
+  Örneğin, yönlendirme modülleri
+  genellikle lazy loading ile yüklenir. Kullanıcı belirli bir sayfaya gitmek istediğinde sadece o sayfa için gerekli
+  olan bileşenler ve modüller
+  yüklenir, diğerleri ise gerekli olana kadar yüklenmez. Bu da performansı artırır ve kullanıcıların daha hızlı bir
+  deneyim yaşamasını sağlar.
+</p>

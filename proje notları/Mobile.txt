@@ -1,0 +1,23 @@
+https://ionicframework.com/docs/intro/vscode-extension
+https://bullishlife.com/angular/how-to-convert-angular-app-to-native-app/?expand_article=1
+ 
+java sdk 11 eklendi ile uyumlu çalışıyor
+
+NativeScript:
+NativeScript is another framework that allows you to build native mobile apps using Angular. Here's a basic guide:
+
+NativeScript:
+NativeScript is another framework that allows you to build native mobile apps using Angular. Here's a basic guide:
+ 
+
+build için sırayla bunları çalıştır
+
+npx cap add android
+npx cap add ios
+ng build
+npx cap sync
+npx cap open android
+
+npx cap open ios
+
+npm run cleandai-and-build yazmak yeterli mobile app için

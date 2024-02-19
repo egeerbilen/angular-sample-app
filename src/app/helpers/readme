@@ -1,0 +1,12 @@
+# Helper (Yardımcı) Katmanı
+
+## Amaç
+Bu katman, genellikle sık kullanılan yardımcı işlevleri içerir. Özellikle UI (kullanıcı arayüzü) ile ilgili yardımcı fonksiyonları ve veri manipülasyonunu sağlayan bileşenleri içerir.
+
+## İşlevi
+- **UI İle İlgili Yardımcı Fonksiyonlar:** Tarih biçimlendirme, dil tercihleri gibi genellikle kullanıcı arayüzü ile ilişkili yardımcı fonksiyonları içerir.
+- **Sık Kullanılan İşlemleri Gerçekleştiren Yardımcı Fonksiyonlar veya Sınıflar:** Kod tekrarını azaltan, genellikle sık kullanılan işlemleri gerçekleştiren fonksiyonları veya sınıfları içerir.
+- **Veri Manipülasyonu ve Biçimlendirme Filtreleri (Pipes):** Veri manipülasyonunu veya biçimlendirmeyi sağlayan filtreleri içerir.
+
+## Kullanım Alanı
+Helper Katmanı, genellikle UI (kullanıcı arayüzü) ve veri işleme ile ilgili yardımcı işlevleri barındırır. Bu katman, sık kullanılan işlevleri bir araya getirerek tekrarı azaltır ve genel uygulama mantığını destekler.

@@ -1,0 +1,40 @@
+<h4>Unit Test</h4>
+<p>Elbette, işte unit testlerin ne olduğu, ne işe yaradığı ve nerelerde kullanıldığına dair maddeler halinde bir liste:
+</p>
+
+<h4>Unit Test Nedir?</h4>
+<ul>
+  <li>Yazılım geliştirme sürecinde kullanılan bir test türüdür.</li>
+  <li>Kodun küçük birimlerini (fonksiyonlar, metotlar, modüller) test etmek için kullanılır.</li>
+  <li>Kodun belirli bir parçasının doğru çalışıp çalışmadığını kontrol eder.</li>
+</ul>
+
+<h4>Ne İşe Yarar?</h4>
+<ul>
+  <li>Kodun beklenen davranışı sergileyip sergilemediğini belirler.</li>
+  <li>Hataları erken aşamada tespit ederek geliştirme sürecinde zaman kazandırır.</li>
+  <li>Kodun değişikliklerden sonra hala istenilen şekilde çalışıp çalışmadığını kontrol eder.</li>
+</ul>
+
+<h4>Nerelerde Kullanılır?</h4>
+<ul>
+  <li>Yazılım geliştirme sürecinin her aşamasında kullanılabilir.</li>
+  <li>Agile veya benzeri esnek geliştirme metodolojilerinde sıkça tercih edilir.</li>
+  <li>Büyük ölçekli projelerde özellikle faydalıdır, karmaşık kod tabanlarında hataları tespit etmede yardımcı olur.
+  </li>
+  <li>Sürekli entegrasyon ve sürekli teslim prensiplerini destekler.</li>
+</ul>
+
+<h4>Faydaları</h4>
+<ul>
+  <li>Kodun daha güvenilir ve sağlam olmasını sağlar.</li>
+  <li>Kodun bakımını kolaylaştırır, değişikliklerin diğer parçalara etkisini kontrol eder.</li>
+  <li>Geliştiriciler arasında kod kalitesini artırarak iletişimi sağlar.</li>
+  <li>Güncel ve eski kodun birbirleriyle uyumlu olduğunu test eder.</li>
+</ul>
+
+<div>
+  <input type="text" [(ngModel)]="inputText" />
+  <button class="btn btn-primary" (click)="convertToUppercase()" #convertToUppercaseId>Convert</button>
+  <p>{{ convertedText }}</p>
+</div>

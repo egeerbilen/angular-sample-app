@@ -1,0 +1,37 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.guides.bracketPairs": "active",
+    "terminal.integrated.env.windows": {},
+    "bitoAI.codeCompletion.setAutoCompletionTriggerLogic": 250,
+    "emmet.preferences": {},
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "cSpell.userWords": ["lintf", "lintq", "Waybinding"],
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "sort-imports.on-save": false,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.confirmSync": false,
+    "cSpell.language": "en,tr",
+    "workbench.tree.indent": 10,
+    "explorer.autoReveal": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "workbench.colorCustomizations": {
+      "tree.indentGuidesStroke": "#00ff00"
+    }
+  }
+  

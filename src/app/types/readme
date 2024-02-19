@@ -1,0 +1,12 @@
+# Types Katmanı
+
+## Amaç
+Bu katman, genellikle bir uygulamanın veri modellerini, belirli veri tiplerini veya nesne yapılarını içerir. Bu yapılar genellikle veri modellemesi veya tipler arası dönüşümler için kullanılır.
+
+## İşlevi
+- **Veri Modelleri ve Tip Tanımları:** Uygulama içinde kullanılacak veri tiplerini, modellerini veya yapılarını tanımlar.
+- **Veri Yapıları ve Nesne Tanımları:** Belirli veri yapılarını veya nesneleri tanımlar, bu sayede farklı bölümler arasında veri paylaşımını veya iletişimini kolaylaştırır.
+- **Tip Dönüşümleri ve Veri Kontrolleri:** Farklı veri tipleri arasında dönüşümleri sağlar veya veri doğrulamaları için kullanılabilir.
+
+## Kullanım Alanı
+Types Katmanı, genellikle uygulamanın veri tiplerini, modellerini ve belirli nesne yapılarını içerir. Bu katman, veri yapılarını standartlaştırarak ve belirli veri tiplerini tanımlayarak uygulama içindeki veri işleme süreçlerini ve veri akışını kolaylaştırır.

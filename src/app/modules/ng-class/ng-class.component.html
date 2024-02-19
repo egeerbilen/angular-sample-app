@@ -1,0 +1,19 @@
+<h4>Ng Class</h4>
+
+<p>
+  ngClass, Angular framework'ünde kullanılan bir direktiftir. Bu direktif, bir HTML öğesine dinamik olarak CSS sınıfları eklemek veya kaldırmak için
+  kullanılır.
+</p>
+<p>
+  Bu sayede, belirli koşullara bağlı olarak farklı stillendirme veya görünüm değişiklikleri yapabilirsiniz. Örneğin, bir koşula bağlı olarak bir
+  öğenin rengini veya görünümünü değiştirebilirsiniz.
+</p>
+
+<p>Koşullu Sınıf Ekleme: Bir koşul sağlandığında belirli bir sınıfın eklenmesi veya kaldırılması gerektiğinde.</p>
+
+<div [ngClass]="{'active': isActive, 'error': isError, 'customClass': isCustom}">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo debitis quidem asperiores voluptatibus facere iusto odio similique. Incidunt
+    quod iure dolorum impedit eum obcaecati cupiditate aspernatur sequi dicta, nulla esse?
+  </p>
+</div>

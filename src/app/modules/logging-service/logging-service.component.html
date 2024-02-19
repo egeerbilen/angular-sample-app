@@ -1,0 +1,37 @@
+<h4>Angular'da Logging Servisleri</h4>
+
+<p>Angular, uygulama içindeki olayları, hataları veya bilgilendirici mesajları izlemek, kaydetmek ve raporlamak için
+  logging servisleri kullanır.</p>
+
+<h2>Temel İşlevler</h2>
+
+<ul>
+  <li><strong>Loglama Seviyeleri Yönetimi:</strong> Logların öncelik düzeylerini belirleme ve filtreleme.</li>
+  <li><strong>Log Mesajlarının Oluşturulması:</strong> Uygulamanın çeşitli yerlerinde log mesajlarının oluşturulması ve
+    işlenmesi.</li>
+  <li><strong>Hataların İzlenmesi:</strong> Uygulamanın hata durumlarını izleme ve kaydetme.</li>
+  <li><strong>Logların İşlenmesi ve Aktarılması:</strong> Log mesajlarının konsola, dosyalara veya uzak bir sunucuya
+    gönderilmesi.</li>
+</ul>
+
+<p>Angular'da logging genellikle Console üzerinden basit bir şekilde yapılabilir veya özel bir logging servisi
+  oluşturulabilir. Bu servisler geliştiricilere daha fazla esneklik sağlar ve uygulama içinde loglama sürecini
+  özelleştirmelerine olanak tanır.</p>
+
+<p>Logging servisleri, uygulamanın performansını izlemek, hata ayıklamasına yardımcı olur ve geliştirme sürecini
+  destekler.</p>
+
+  
+Angular'da Redux'un yerine servis kullanmak, veri yönetimi ve durum yönetimi açısından farklı bir yaklaşım sunabilir.
+Redux genellikle Angular uygulamalarında durum yönetimi için kullanılır ve merkezi bir depo (store) üzerinden verileri
+yönetir. Bu, uygulama genelinde veri değişikliklerini takip etmeyi ve yönetmeyi kolaylaştırır.
+
+Ancak, Redux'un yerine servis kullanmayı tercih etmek istiyorsanız, Angular'ın sunduğu servislerle veri yönetimi
+yapabilirsiniz. Servisler, farklı bileşenler arasında veri paylaşımı ve iş mantığının ayrı tutulması için kullanılır.
+Servisler, Redux gibi merkezi bir durum yönetimi sağlamazlar, bu yüzden büyük ölçekli ve karmaşık durum yönetimi
+gerektiren durumlarda Redux'un sunduğu yapısal avantajlar tercih edilebilir. Ancak, küçük ve orta ölçekli uygulamalarda
+servislerle veri yönetimi yapılabilmektedir.
+
+<b>Örnek</b>
+<br>
+<button (click)="logMessage()" class="btn btn-primary">Log Message</button>

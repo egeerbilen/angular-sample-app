@@ -1,0 +1,39 @@
+<h4>Angular Önbellekleme Yönetimi</h4>
+<p>
+  Angular, bir JavaScript framework'üdür ve Angular uygulamaları genellikle tarayıcıda çalışırken performansı artırmak ve tekrar eden istekleri
+  azaltmak için önbelleği yönetmek önemlidir. Angular'da önbellek yönetimi için farklı yaklaşımlar ve araçlar bulunmaktadır.
+</p>
+
+<p>Angular'da önbellek yönetimi genellikle şu alanlarda kullanılır:</p>
+<ol>
+  <li>
+    <strong>HTTP İstekleri:</strong> Sunucudan veri almak için yapılan HTTP istekleri, önbellekleme ile optimize edilebilir. İstenen verilerin
+    önbelleğe alınması ve gerektiğinde tekrar kullanılması, ağ trafiğini azaltabilir ve uygulamanın performansını artırabilir.
+  </li>
+  <li>
+    <strong>Component İçi Veri Depolama:</strong> Angular'da bir bileşen içindeki veriler geçici olarak önbelleğe alınabilir. Bu, aynı veriye tekrar
+    tekrar erişmek yerine yerel olarak saklanmasını sağlar.
+  </li>
+  <li>
+    <strong>State Management (Durum Yönetimi):</strong> Angular uygulamalarında durum yönetimi için çeşitli kütüphaneler veya teknikler
+    kullanılabilir. Durum yönetimi, uygulamanın durumu (state) ile ilgili verilerin depolanması, yönetilmesi ve bu verilere erişimin kontrol
+    edilmesiyle ilgilenir. Bu da genellikle veri önbelleğini içerir.
+  </li>
+</ol>
+
+<p>
+  Angular'da önbellek yönetimi için çeşitli yöntemler ve araçlar bulunmaktadır. Bunlar arasında HTTP İnterceptor, RxJS'in BehaviorSubject ve
+  ReplaySubject gibi akışları, Local Storage veya Session Storage gibi yöntemler bulunmaktadır.
+</p>
+
+<p>
+  Önbellekleme, uygulamanın performansını artırmanın yanı sıra ağ trafiğini azaltabilir ve kullanıcı deneyimini iyileştirebilir. Ancak, doğru ve
+  gereksiz önbellekleme arasında bir denge kurmak önemlidir.
+</p>
+
+<div>
+  <button class="btn btn-primary" (click)="setData()">Set Data</button>
+  <button class="btn btn-primary" (click)="getData()">Get Data</button>
+  <button class="btn btn-primary" (click)="checkData()">Check Data</button>
+  <button class="btn btn-primary" (click)="clearData()">Clear Data</button>
+</div>

@@ -1,0 +1,49 @@
+<h3>Life Cycle Samples</h3>
+<hr />
+
+<kendo-expansionpanel title="Özet">
+    <ul>
+        <li> <strong>constructor():</strong> Bileşen oluşturulduğunda çalışır. Bileşen sınıfı başla</li>
+        <li><strong>ngOnChanges():</strong> Bileşenin giriş özellikleri değiştiğinde çağrılır. Değişiklikler
+            algılandığında
+            bu metod tetiklenir.</li>
+        <li><strong>ngOnInit():</strong> Bileşen oluşturulduğunda çağrılır. İlk giriş özellikleri ayarlandıktan ve
+            bileşen
+            hazır olduğunda çalışır.</li>
+        <li><strong>ngDoCheck():</strong> Bileşenin herhangi bir değişiklik kontrolü için kullanılan metottur. Angular
+            değişiklik dedektörleri tarafından tetiklenir. Manüel değişiklik algılaması veya özel durum kontrolü için
+            kullanılabilir.</li>
+        <li><strong>ngAfterContentInit():</strong> Dış içerik projeksiyonu (ng-content) tamamlandığında çağrılır. Dış
+            içeriğin bileşene yerleştirilmesi tamamlandığında çalışır.</li>
+        <li><strong>ngAfterContentChecked():</strong> Dış içerik kontrolü tamamlandığında çağrılır. Dış içerikteki
+            değişikliklerden sonra çalışır.</li>
+        <li><strong>ngAfterViewInit():</strong> Bileşenin görünümü oluşturulduğunda çağrılır. Bileşenin görüntüsü hazır
+            olduğunda çalışır.</li>
+        <li><strong>ngAfterViewChecked():</strong> Görünüm kontrolü tamamlandığında çağrılır. Görünümdeki
+            değişikliklerden
+            sonra çalışır.</li>
+        <li><strong>ngOnDestroy():</strong> Bileşen yok edilmeden önce çağrılır. Bileşenin işi bitirildiğinde veya
+            bileşen
+            kaldırıldığında çalışır.</li>
+    </ul>
+</kendo-expansionpanel>
+
+<kendo-expansionpanel title="cycle İmg">
+    <img src="../../assets/images/life-cycle.jpg" alt="life cycle" />
+</kendo-expansionpanel>
+
+<kendo-expansionpanel title="Notlar">
+    <strong>
+        Notlar:
+    </strong>
+    <ul>
+        <li> "Bileşen", genellikle kullanıcı arayüzü oluşturmak için kullanılan ve belirli bir işlevi veya görünümü
+            temsil eden, yeniden kullanılabilir
+            yapıdır.
+        </li>
+    </ul>
+
+</kendo-expansionpanel>
+<br>
+
+<router-outlet></router-outlet>

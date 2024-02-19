@@ -1,0 +1,15 @@
+## Constants Layer
+
+### Özellikler
+
+- **Sabit Değer Tanımlama:** Constants katmanı, uygulamanın herhangi bir yerinde kullanılmak üzere sabit değerlerin tanımlanması için kullanılır.
+  
+- **NgModule İçinde Kullanım:** Tanımlanan constantlar, uygulamanın farklı bileşenleri arasında paylaşılabilir.
+  
+- **ReadOnly Değerler:** Constantlar genellikle readOnly (salt okunur) olarak tanımlanır ve değiştirilemez.
+  
+- **Dependency Injection ile Kullanım:** Constant değerler, Angular'ın dependency injection mekanizması ile farklı bileşenlere enjekte edilebilir.
+  
+- **Genel Ayarlar ve Sabitler:** Uygulamanın genelinde kullanılacak ayarlar veya sabitler bu katman içinde tanımlanabilir.
+
+Constant katmanı, Angular uygulamalarında genellikle sabit değerlerin merkezi bir şekilde yönetilmesini sağlar ve bu değerlerin kolayca erişilmesini ve kullanılmasını mümkün kılar.

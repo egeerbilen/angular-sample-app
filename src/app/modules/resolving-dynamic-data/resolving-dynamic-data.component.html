@@ -1,0 +1,68 @@
+<h4>Resolving Dynamic Data</h4>
+<p><b>Not: Http Request Sayfasından token oluştur</b></p>
+<p>
+  Angular'da "resolving dynamic data" terimi, Angular route'ları kullanırken belirli bir route'a geçiş yapmadan önce
+  verileri yüklemek ve bu verilerin yüklenmesini beklemek için kullanılan bir tekniği ifade eder.
+</p>
+<p>
+  Özetle, "resolving dynamic data" Angular'da, route geçişleri sırasında verilerin önceden yüklenmesini ve hazır hale
+  getirilmesini sağlayarak, kullanıcıya daha hızlı ve akıcı bir deneyim sunmak için kullanılan bir tekniktir.
+</p>
+<p>
+ <b>Önemli: </b> single page applicationda önce sayfaya gidilir sayfa geldikden sonra ngoninit ile back end ile haberleşilir. Serve
+  page applicationlarda A sayfasından B sayfasına gitmek istediğimizde önce B sayfası ile ilgili datayı serverdan alır
+  sonrasında daha sonra B sayfasında gösteririz eğer data gelmez ise B sayfasını gösteremeyiz. Resolver lar ile A
+  sayfasında B sayfasına gitmeden önce B sayfasının ihtiyacı olan datayı çekebiliyorsunuz. Pagede de route üzerinden bu
+  datayı okuya biliyoruz.
+</p>
+<p>İşte resolve koruyucusunun kullanımına dair bazı önemli noktalar:</p>
+<ul>
+  <li>
+    Veri Ön Yükleme: Resolve koruyucusu, bir rotanın yüklenmesi için gereken verileri önceden yüklemek için kullanılır.
+    Bu, örneğin bir API'den veri
+    almak veya bir servisten veri çekmek gibi işlemler yapılabilir.
+  </li>
+  <li>
+    Rotanın Aktivasyonunu Engelleme: Veriler yüklenene kadar, rotanın aktive edilmesini engeller. Bu sayede, uygulama
+    beklenen veriler yüklenmeden
+    önce rotayı göstermez ve bu da kullanıcı deneyimini geliştirebilir.
+  </li>
+  <li>
+    Controller ve View Bağlamında Kullanım: Resolve koruyucusu, rotanın controller'ı veya view'ı gibi bileşenlerin
+    yüklenmesinden önce çalıştırılır.
+    Bu, rotanın işleyişini veya görüntüsünü etkileyebilecek verilerin hazır olmasını sağlar.
+  </li>
+  <li>
+    Asenkron Veri Yükleme: Resolve fonksiyonları genellikle asenkron işlemler yapabilir, bu da API çağrıları veya diğer
+    uzun sürecek işlemler için
+    uygun bir mekanizma sunar.
+  </li>
+  <li>
+    Kullanım Alanları: Veri tabanı erişimi, oturum yönetimi, yetkilendirme kontrolü gibi birçok senaryoda resolve
+    koruyucusu kullanılabilir.
+    Özellikle, kullanıcı girişi gerektiren sayfalar veya dinamik içerik yüklemesi gereken sayfalar için tercih edilir.
+  </li>
+</ul>
+<p>
+  constructor içinde bir servisi çağırmak veri almak için kullanılabilir, ancak Resolver kullanımı farklı bir yaklaşım
+  sunar. Resolver, bir rotanın
+  yüklenmesi öncesinde belirli bir bileşenin görüntülenmesi için gerekli olan verilerin yüklenmesini sağlar. Bu, sayfa
+  yüklendiğinde verilerin hazır
+  olmasını garanti eder, böylece gecikme olmaz ve daha kesintisiz bir kullanıcı deneyimi sunulur. Constructor içinde
+  veri çağırmak ise bileşen
+  yüklendikten sonra verileri alır, bu da bir gecikmeye neden olabilir.
+</p>
+<p>
+  Örneğin, bir kullanıcının profil sayfasına gitmek istediğinizde, bu sayfanın bileşeni yüklenmeden önce o kullanıcının
+  verilerini almak
+  isteyebilirsiniz. Bunun için route resolve özelliğini kullanabilirsiniz. Kullanıcı verileri başarılı bir şekilde
+  alındığında bileşen yüklenir ve
+  gerekli veriler zaten mevcut olur. veriler gelmezse zaten sayfayı yüklememize gerek kalmaz Bu yöntem, veri alımı veya
+  doğrulaması gibi işlemleri
+  gerçekleştirmek için kullanılabilir ve kullanıcı deneyimini geliştirmek için faydalı olabilir.
+</p>
+<b>Not: </b>gelen veriler için konsola bak
+<br />
+<ul *ngFor="let resolvedDataItem of resolvedData">
+  <li>{{resolvedDataItem.name}}</li>
+</ul>

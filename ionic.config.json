@@ -1,0 +1,7 @@
+{
+  "name": "fragmentary-simple-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

@@ -1,0 +1,12 @@
+# Assets Katmanı
+
+## Amaç
+Bu katman, genellikle bir uygulamanın arayüzünü veya içeriğini oluşturan görseller, fontlar, CSS dosyaları, JavaScript dosyaları gibi statik dosyaları veya kaynakları içerir.
+
+## İşlevi
+- **Görseller ve Grafikler:** Uygulamanın kullanacağı görseller, ikonlar, arka planlar gibi görsel kaynakları içerir.
+- **Fontlar:** Uygulamanın kullanacağı font dosyalarını içerir.
+- **Stil Dosyaları (CSS) ve Betik Dosyaları (JavaScript):** Uygulamanın stilini düzenleyen CSS dosyaları veya interaktif özellikler sağlayan JavaScript dosyalarını içerir.
+
+## Kullanım Alanı
+Assets Katmanı, genellikle bir uygulamanın arayüzünü oluşturan statik dosyaları içerir. Bu dosyalar, genellikle görseller, fontlar, stil dosyaları ve betik dosyaları gibi kaynakları depolar. Bu kaynaklar, uygulamanın görünümünü ve işlevselliğini destekler.

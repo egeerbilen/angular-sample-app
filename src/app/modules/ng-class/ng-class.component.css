@@ -1,0 +1,14 @@
+.active {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  text-decoration: underline;
+}
+
+.customClass {
+  background-color: yellow;
+  border: 2px solid orange;
+}

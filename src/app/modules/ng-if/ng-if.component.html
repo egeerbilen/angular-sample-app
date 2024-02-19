@@ -1,0 +1,54 @@
+<h4>ngIf</h4>
+
+<!-- ng if kullandığında hidden olmuyor direk olarak DOM içerisinden kaldırılıyor yani html den direk olarak kaldırılıyor -->
+<input type="text" [(ngModel)]="text" *ngIf="ifCheckerValue; else noCheckerValue" />
+<!-- ng-template, Angular'da kullanılan bir yapıdır ve genellikle kullanıcı arayüzünde dinamik olarak içerik oluşturmak için kullanılır -->
+<ng-template #noCheckerValue>ifCheckerValue value false geldi else girdi </ng-template>
+
+<button (click)="ifChanger()" class="btn btn-primary">if Changer</button>
+{{ text }}
+<br>
+<br>
+<p>
+    <b>Not: </b>ng if kullandığında hidden olmuyor direk olarak DOM içerisinden kaldırılıyor yani html den direk olarak
+    kaldırılıyor
+</p>
+<hr />
+<br />
+<div>
+    <p>Not: Bu sayfa üzerinde kullanılan özel operatörler hakkında bilgi alabilirsiniz.</p>
+    <p>Ternary Operatör Kod Örneği: <code>public result: string = this.condition ? 'Doğru' : 'Yanlış';</code></p>
+    <p>Short-Circuit: <code>isLoggedIn && logout();</code> Bu şekilde, "isLoggedIn" doğruysa "logout()" fonksiyonu
+        çağrılır.</p>
+    <hr />
+    <br />
+
+    <!-- Short-Circuit Operatörleri -->
+    <p>Short-Circuit Operatörleri:</p>
+    <p><code>isLoggedIn && logout();</code> Bu şekilde, "isLoggedIn" doğruysa "logout()" fonksiyonu çağrılır.</p>
+    <p><code>!isLoggedIn && login();</code> "isLoggedIn" yanlışsa "login()" fonksiyonu çağrılır.</p>
+    <hr />
+    <br />
+
+    <!-- Nullish Coalescing (??) Operator Notu -->
+    <p>Nullish Coalescing (??) Operator Kod Örneği: <code>const userName = retrievedUserName ?? 'Misafir';</code></p>
+    <p>Eğer "retrievedUserName" değişkeni null veya undefined ise, "userName" değişkeninin çıktısı 'Misafir' olacaktır.
+    </p>
+    <p>Ama "retrievedUserName" değişkeni null veya undefined değilse, "userName" değişkeninin değeri "retrievedUserName"
+        olacaktır.</p>
+
+    <hr />
+    <br />
+    <!-- Logical OR (||) Operator Notu -->
+    <p>Logical OR (||) Operator Kod Örneği: <code>const userName = retrievedUserName || 'Misafir';</code></p>
+    <p>Eğer "retrievedUserName" değişkeni null, undefined veya boş string ise, "userName" değişkeninin çıktısı 'Misafir'
+        olacaktır.</p>
+    <p>Aksi takdirde, "retrievedUserName" değeri "userName" değişkenine atanır.</p>
+
+    <hr />
+    <br />
+    <!-- Logical AND (&&) Operator Notu -->
+    <p>Logical AND (&&) Operator Kod Örneği: <code>const result = value1 && value2;</code></p>
+    <p>Eğer sol tarafındaki değer true ise, sağ taraftaki değeri döndürür; aksi halde sol tarafındaki değeri döndürür.
+    </p>
+</div>

@@ -1,0 +1,85 @@
+<h4>NGRX Nedir?</h4>
+<p>NGRX, Angular için bir durum yönetim kütüphanesidir. Genellikle Angular uygulamalarında kullanılır ve Redux'un
+  temellerine dayanır.</p>
+
+<h5>Kullanım Alanları:</h5>
+<ol>
+  <li>
+    <strong>Durum Yönetimi:</strong> NGRX, büyük ve karmaşık uygulamalarda veri akışını kolaylaştırmak için kullanılır.
+    Uygulama durumu, tek bir
+    depoda (store) merkezi olarak saklanır ve bu durum, bileşenler arasında paylaşılır.
+  </li>
+  <li>
+    <strong>Redux'un İmkanları:</strong> NGRX, Redux'un temel prensiplerini takip eder. Eylemler (actions), durum
+    (state) ve azaltıcılar (reducers)
+    kullanarak veri akışını yönetir. Bu sayede uygulama durumu tahmin edilebilir ve yönetilebilir hale gelir.
+  </li>
+  <li>
+    <strong>Asenkron Veri Yönetimi:</strong> NGRX, asenkron veri akışını kolaylaştırır. Özellikle HTTP istekleri gibi
+    asenkron işlemleri yönetmek için
+    etkili bir şekilde kullanılabilir.
+  </li>
+  <li>
+    <strong>Bileşenler Arası İletişim:</strong> Büyük Angular uygulamalarında bileşenler arası iletişimi sağlamak için
+    NGRX kullanılabilir. Durumun
+    merkezi olarak saklanması, bileşenler arasında veri alışverişi yapmayı kolaylaştırır.
+  </li>
+  <li>
+    <strong>Zengin Uygulama Durumu:</strong> NGRX, uygulama durumunu zenginleştirmek için kullanılır. Böylece uygulama
+    genelinde tutarlı bir durum
+    yönetimi sağlanır.
+  </li>
+</ol>
+
+<p>
+  Bu maddeler, NGRX'nin temel kullanım alanlarını ve sağladığı faydaları özetlemektedir. Bu kütüphaneyi kullanarak
+  Angular uygulamalarınızın durum
+  yönetimini daha etkili bir şekilde gerçekleştirebilirsiniz.
+</p>
+<br />
+<img src="../../assets/images/ngRx-state-management.png" alt="" style="height: 450px; width: 670px" />
+<br />
+<br />
+<h4>NGRX State Management</h4>
+<p>
+  <b>Store Oluşturma:</b> İlk adım, bir store oluşturmak ve uygulama durumunu depolamak için gerekli yapıyı
+  hazırlamaktır. Bu, genellikle @ngrx/store
+  kullanılarak yapılır.
+</p>
+
+<p>
+  <b>Actions (Eylemler):</b> Eylemler, uygulama durumunun değiştirilmesi için tetikleyici görevi görür. Örneğin, bir
+  kullanıcı tarafından yapılan bir
+  işlem sonucunda tetiklenen eylemler oluşturulur.
+</p>
+
+<p>
+  <b>Reducers (Azaltıcılar):</b> Reducer'lar, eylemlere dayalı olarak mevcut durumu alıp yeni bir durum üretir. Bu yeni
+  durum, store içinde
+  güncellenir. Reducer'lar, mevcut durumu ve bir eylemi alarak yeni bir durum döndüren fonksiyonlardır.
+</p>
+
+<p>
+  <b>Selectors (Seçiciler):</b> Selector'lar, store içindeki belirli verilere erişmek için kullanılır. Bu, bileşenlerin
+  sadece ihtiyaç duyduğu
+  verilere erişmesini sağlar ve uygulama performansını artırabilir.
+</p>
+
+<p>
+  <b>Effects (Efektler):</b> Efektler, yan etkileri yönetmek için kullanılır. Örneğin, HTTP istekleri yapmak gibi
+  asenkron işlemler burada yönetilir.
+  @ngrx/effects kullanılarak efektler tanımlanır.
+</p>
+<br />
+
+<div>
+  <p>Current Count: {{ count }}</p>
+  <!-- OR -->
+  <!-- <p>Current Count: {{ count$ | async}}</p> -->
+  <button class="btn btn-primary" style="margin-right: 10px;" (click)="increment()">Increment</button>
+  <button class="btn btn-primary" style="margin-right: 10px;" (click)="decrement()">Decrement</button>
+  <button class="btn btn-primary" (click)="reset()">Reset</button>
+  <br><br>
+  {{ user | json }}
+  <button class="btn btn-primary mt-3" (click)="setUserValue()">Set User Value</button>
+</div>

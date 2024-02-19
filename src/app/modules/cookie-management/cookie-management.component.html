@@ -1,0 +1,69 @@
+<h4>Çerezler Nedir ve Nasıl Kullanılır?</h4>
+
+<p>
+  AngularJS veya Angular Framework ile işaretlenmiş bir konsept olan "cookies" (çerezler), web tarayıcılarında depolanan küçük veri parçacıklarıdır.
+  AngularJS ve Angular Framework, tarayıcıda çerezleri yönetmek için çeşitli yöntemler sunar.
+</p>
+
+<h2>Çerezlerin Kullanım Amaçları</h2>
+
+<ol>
+  <li>
+    <strong>Kullanıcı Oturumlarını Yönetme:</strong>
+    <p>
+      Kullanıcı oturumlarını sürdürmek ve yönetmek için kullanılır. Kullanıcı bir oturum açtığında, çerezler genellikle kimlik doğrulama bilgilerini
+      saklar ve kullanıcı oturumu boyunca bu bilgilere erişim sağlar.
+    </p>
+  </li>
+  <li>
+    <strong>Tercihleri ve Ayarları Saklama:</strong>
+    <p>
+      Kullanıcı tercihlerini ve site ayarlarını hatırlamak için kullanılabilir. Örneğin, tercih edilen dil, tema veya site içi özelleştirmeler gibi.
+    </p>
+  </li>
+  <li>
+    <strong>Analiz ve İzleme:</strong>
+    <p>
+      Ziyaretçi davranışlarını anlamak ve web sitesinin performansını, kullanımını analiz etmek amacıyla çerezler kullanılabilir. Bu, kullanıcıların
+      nasıl etkileşimde bulunduğunu anlamak ve site deneyimini geliştirmek için önemli olabilir.
+    </p>
+  </li>
+  <li>
+    <strong>Alışveriş Sepeti ve İşlemler:</strong>
+    <p>
+      E-ticaret sitelerinde alışveriş sepeti veya kullanıcı işlemleri gibi geçici verilerin saklanması için kullanılabilir. Bu, kullanıcıların
+      alışveriş sepetlerini korumak veya işlem adımlarını hatırlamak için önemlidir.
+    </p>
+  </li>
+  <li>
+    <strong>Reklamcılık ve İçerik Kişiselleştirme:</strong>
+    <p>
+      Kullanıcıların ilgi alanlarına dayalı olarak reklamları veya içerikleri kişiselleştirmek için çerezler kullanılabilir. Bu, ziyaretçilere daha
+      ilgili içerik sunmada yardımcı olabilir.
+    </p>
+  </li>
+</ol>
+
+<p>
+  Angular'da çerezler genellikle <code>@angular/common/http</code> modülünde bulunan <code>HttpClient</code> ile işlenir.
+  <code>HttpClient</code> kullanılarak istemci tarafından çerezlere erişim sağlanabilir, eklenip kaldırılabilir veya değiştirilebilir. Ayrıca,
+  <code>@angular/router</code> modülü, sayfa yönlendirmelerini ve çerezlerle ilişkilendirilmiş belirli sayfa durumlarını yönetmek için kullanılabilir.
+</p>
+
+<p>
+  Bu çerez işlemleri, kullanıcıların siteyi kullanırken veri saklama ve erişimini kolaylaştırarak daha zengin ve kişiselleştirilmiş bir deneyim
+  sunmada yardımcı olabilir.
+</p>
+
+<div>
+  <h5>Çerez İşlemleri Örneği</h5>
+
+  <button class="btn btn-primary" (click)="addCookie()">Çerez Ekle</button>
+  <button class="btn btn-primary" (click)="getCookieValue()">Çerez Değerini Al</button>
+  <button class="btn btn-primary" (click)="deleteCookie()">Çerezi Sil</button>
+  <br />
+  <div>
+    Çerez Değeri:
+    <p *ngIf="cookieValue">{{ cookieValue }}</p>
+  </div>
+</div>

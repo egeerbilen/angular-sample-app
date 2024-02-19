@@ -1,0 +1,49 @@
+<h4>NgAfterContentInit</h4>
+
+<br />
+<h5>Yaşam Döngüsü Kancası</h5>
+<p>Angular bileşenlerinin yaşam döngüsü olaylarından biridir. Bu kancanın tetiklenmesi, bileşenin içeriğine erişilebilir
+  hale geldiği zamandır.</p>
+
+<h5>İçerik İşlemleri İçin Kullanım</h5>
+<p>
+  Bileşenin içerdiği <code>&lt;ng-content&gt;</code> veya <code>ContentChild</code> gibi içerikle ilgili işlemleri
+  gerçekleştirmek için kullanılır.
+  Örneğin, içerik öğelerini seçmek, içeriği döngüyle işlemek veya bazı durumlarda içerik üzerinde değişiklikler yapmak
+  için kullanılabilir.
+</p>
+
+<h5>Direktiflerle Kullanım</h5>
+<p>
+  Özellikle özelleştirilmiş direktiflerin içerik üzerinde değişiklikler yapması gereken durumlarda kullanışlıdır.
+  Direktifler, bileşenin içeriğine
+  erişmek ve içerik üzerinde manipülasyon yapmak için <code>ngAfterContentInit</code> kullanabilir.
+</p>
+
+<h5>Sınıf Metodu</h5>
+<p>
+  Angular bileşenlerinde, <code>ngAfterContentInit</code> metodu, <code>AfterContentInit</code> özel bir arayüzü
+  uygular. Bu metot, bileşenin
+  sınıfında tanımlanır ve içeriğin hazır olduğu zaman çağrılır.
+</p>
+<br />
+<h4>ngAfterContentInit ile ngAfterContentChecked Arasındaki Fark</h4>
+<ul>
+  <li>
+    <strong>ngAfterContentChecked():</strong>
+    <ul>
+      <li>ngAfterContentChecked(), dış içeriğin her değiştiğinde kontrol edildiği zamanlarda çalışır.</li>
+      <li>Bu metod, bileşenin dış içeriğini kontrol eder ve bu içeriğin her değiştiğinde tetiklenir.</li>
+      <li>
+        Herhangi bir dış içerik değişikliği algılandığında çalışır. Bu nedenle, bu metod sürekli olarak dış içeriği
+        kontrol eder ve içeriğin durumunu
+        günceller.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<app-ng-after-content-init-child>
+  <p #contentParagraph>Burası içerik paragrafıdır.</p>
+  <span>Burası içerikte değil.</span>
+</app-ng-after-content-init-child>

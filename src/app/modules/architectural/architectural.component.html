@@ -1,0 +1,218 @@
+<h4>Architectural</h4>
+<br />
+
+<h5>Angular'da Shared Module Nedir?</h5>
+<p>
+  Angular'da "shared module" genellikle bir uygulama içinde birden fazla modül tarafından kullanılacak ortak
+  bileşenlerin, direktiflerin, servislerin
+  ve diğer öğelerin bir araya getirildiği bir modüldür. Bu, kodun tekrar kullanılabilirliğini artırır ve aynı öğelerin
+  farklı modüller arasında
+  paylaşılmasını sağlar.
+</p>
+
+<p>Bir "shared module", genellikle şu tür öğeleri içerebilir:</p>
+
+<ul>
+  <li>Ortak bileşenler (components): Birden fazla modülde kullanılacak olan bileşenler.</li>
+  <li>Ortak direktifler (directives): Farklı modüller arasında paylaşılan direktifler.</li>
+  <li>Ortak servisler (services): Farklı bileşenler ve modüller arasında veri paylaşımını sağlayan servisler.</li>
+  <li>Ortak yardımcı fonksiyonlar veya yardımcı sınıflar: Kullanımı genel olan yardımcı öğeler.</li>
+</ul>
+
+<p>
+  Bu modülü oluşturmak, karmaşık yapıları basitleştirir ve kod tekrarını azaltır. Ayrıca, uygulamanın genelinde
+  kullanılacak olan özellikleri bir
+  araya getirerek kodu daha organize hale getirir.
+</p>
+
+<p>
+  Örneğin, bir uygulamada birden fazla bileşenin veya servisin farklı modüllerde kullanılması gerekiyorsa, bu öğeleri
+  bir "shared module" içinde
+  toplamak ve daha sonra ihtiyaç duyulan her modüle bu "shared module"u eklemek genellikle iyi bir uygulama yöntemidir.
+  Bu sayede kodun yönetimi ve
+  bakımı daha kolay olur.
+</p>
+<br />
+
+<h4>Angular Katman Açıklamaları</h4>
+
+<h4>Modüller Katmanı</h4>
+
+<h5>Amaç</h5>
+<p>Bu katman, belirli bir işlevselliği veya mantığı bir araya getiren, genellikle bağımsız çalışabilen bileşenleri
+  içerir. Bu bileşenler, genellikle farklı özellikleri veya işlevleri temsil eder.</p>
+
+<h5>İşlevi</h5>
+<ul>
+  <li><strong>Belirli İşlevselliği Gruplama:</strong> Örneğin, e-ticaret uygulamasında "Ürünler", "Sepet", "Ödeme" gibi
+    belirli işlevselliği gruplar.</li>
+  <li><strong>Bağımsız Çalışabilirlik:</strong> Modüller genellikle kendi içinde bağımsız çalışabilir ve genellikle
+    diğer modüllerle etkileşimde bulunabilir.</li>
+  <li><strong>Farklı İşlevsellikleri Kategorize Etme:</strong> Uygulamanın farklı özelliklerini veya işlevlerini
+    düzenleyerek kategorize etme işlevi görür.</li>
+</ul>
+
+<h5>Kullanım Alanı</h5>
+<p>Modüller Katmanı, genellikle uygulamanın farklı işlevselliği veya özelliklerini gruplandırır. Bu katman, genellikle
+  farklı özelliklerin veya işlevlerin düzenlenmesi ve bir araya getirilmesi için kullanılır. Her modül, kendi içinde
+  belirli bir işlevselliği temsil eder ve genellikle birbiriyle bağımsız çalışabilir.</p>
+
+<h5>Core Katmanı</h5>
+<ul>
+  <li>
+    <strong>Amaç:</strong> Uygulamanın temel işleyişini sağlayan yapısal bileşenlerin bulunduğu katmandır.
+  </li>
+  <li>
+    <strong>İşlevi:</strong>
+    <ul>
+      <li>Genellikle yetkilendirme, yönlendirme, uygulama durumu gibi genel işlevleri sağlayan servisleri içerir.</li>
+      <li>Uygulamanın genelinde kullanılan ortak öğeleri (veri depolama, API iletişimi gibi) içerir.</li>
+      <li>Temel yapısal bileşenleri, uygulamanın çekirdeğini oluşturur.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Kullanım Alanı:</strong> Uygulamanın genel yapısını oluşturur, işlevsel temel bileşenleri barındırır.
+  </li>
+</ul>
+<h5>Helper (Yardımcı) Katmanı</h5>
+<ul>
+  <li>
+    <strong>Amaç:</strong> Genellikle sık kullanılan yardımcı işlevleri içeren katmandır.
+  </li>
+  <li>
+    <strong>İşlevi:</strong>
+    <ul>
+      <li>Tarih biçimlendirme, dil tercihleri gibi genellikle UI ile ilgili yardımcı fonksiyonları içerir.</li>
+      <li>Sık kullanılan işlemleri gerçekleştiren, kod tekrarını azaltan yardımcı fonksiyonları veya sınıfları içerir.
+      </li>
+      <li>Veri manipülasyonunu veya biçimlendirmeyi sağlayan filtreleri (pipes) içerir.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Kullanım Alanı:</strong> Genellikle UI ve veri işlemeyle ilgili yardımcı işlevleri barındırır.
+  </li>
+</ul>
+<h5>Shared (Paylaşılan) Katmanı</h5>
+<ul>
+  <li>
+    <strong>Amaç:</strong> Farklı bileşenler arasında paylaşılan ve tekrar kullanılabilir bileşenleri içeren yapıdır.
+  </li>
+  <li>
+    <strong>İşlevi:</strong>
+    <ul>
+      <li>Birden fazla yerde kullanılan UI bileşenlerini içerir (butonlar, form alanları, kartlar gibi).</li>
+      <li>Farklı bileşenler veya modüller arasında paylaşılan genel servisleri veya yardımcı öğeleri içerir.</li>
+      <li>Genellikle tekrar kullanılabilir ve genel amaçlı bileşenleri barındırır.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Kullanım Alanı:</strong> Farklı bileşenler veya modüller arasında paylaşılan, genel amaçlı bileşenleri ve
+    servisleri barındırır.
+  </li>
+</ul>
+<h5>Settings (Ayarlar) Katmanı</h5>
+<ul>
+  <li>
+    <strong>Amaç:</strong> Genellikle uygulamanın yapılandırma bilgilerini ve ayarlarını barındıran bir yapıdır.
+  </li>
+  <li>
+    <strong>İşlevi:</strong>
+    <ul>
+      <li>Farklı ortamlar için yapılandırma değişkenlerini içerebilir (örneğin, geliştirme, üretim, test ortamları için
+        farklı API URL'leri gibi).</li>
+      <li>Uygulama genelinde kullanılan özelliklerin veya davranışların yapılandırma bilgilerini içerebilir (örneğin,
+        dil tercihleri, tema seçenekleri gibi).</li>
+      <li>API anahtarları veya kimlik bilgileri gibi harici servislerle iletişim kurmak için kullanılan bilgileri
+        içerebilir.</li>
+      <li>Kullanıcı tarafından tercih edilen özel ayarları veya seçenekleri saklayabilir (örneğin, kullanıcı tercih
+        ettiği tema, dil veya varsayılan tercihler).</li>
+      <li>Veri depolama yönetimini ve yapılandırma bilgilerini içerebilir (örneğin, yerel depolama veya diğer veri
+        saklama mekanizmaları).</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Kullanım Alanı:</strong> Genellikle uygulamanın genel yapılandırma bilgilerini, değişkenlerini ve ayarlarını
+    barındırır.
+  </li>
+</ul>
+<h4>Enums (Sabitler) Katmanı</h4>
+
+<h5>Amaç</h5>
+<p>Bu katman, genellikle belirli bir veri tipi içindeki sabit değerleri veya seçenekleri içerir. Bu değerler, genellikle
+  belirli bir veri alanında kullanılacak olan sabitler veya seçenekler olarak tanımlanır.</p>
+
+<h5>İşlevi</h5>
+<ul>
+  <li><strong>Belirli Sabit Değerlerin Tanımlanması:</strong> Örneğin, belirli bir veri tipi içinde kullanılacak olan
+    sabit değerleri tanımlar (örneğin, haftanın günleri, durumlar, kategoriler gibi).</li>
+  <li><strong>Seçeneklerin Standartlaştırılması:</strong> Belirli bir veri tipi içindeki seçeneklerin
+    standartlaştırılması ve genel olarak erişilebilir olması için kullanılır.</li>
+  <li><strong>Veri Kontrolleri ve Doğrulamalar:</strong> Belirli bir değerin belirli sabitler içinde olup olmadığını
+    kontrol etmek veya geçerliliğini doğrulamak için kullanılabilir.</li>
+</ul>
+
+<h5>Kullanım Alanı</h5>
+<p>Enums Katmanı, genellikle belirli bir veri tipi içindeki sabit değerleri veya seçenekleri içerir. Bu katman,
+  sabitlerin standartlaştırılması ve belirli bir veri alanında kullanılan seçeneklerin kolay erişilebilir olmasını
+  sağlar. Ayrıca, veri doğrulama veya kontrol işlemlerinde de kullanılabilir.</p>
+
+<h4>Types Katmanı</h4>
+
+<h5>Amaç</h5>
+<p>Bu katman, genellikle bir uygulamanın veri modellerini, belirli veri tiplerini veya nesne yapılarını içerir. Bu
+  yapılar genellikle veri modellemesi veya tipler arası dönüşümler için kullanılır.</p>
+
+<h5>İşlevi</h5>
+<ul>
+  <li><strong>Veri Modelleri ve Tip Tanımları:</strong> Uygulama içinde kullanılacak veri tiplerini, modellerini veya
+    yapılarını tanımlar.</li>
+  <li><strong>Veri Yapıları ve Nesne Tanımları:</strong> Belirli veri yapılarını veya nesneleri tanımlar, bu sayede
+    farklı bölümler arasında veri paylaşımını veya iletişimini kolaylaştırır.</li>
+  <li><strong>Tip Dönüşümleri ve Veri Kontrolleri:</strong> Farklı veri tipleri arasında dönüşümleri sağlar veya veri
+    doğrulamaları için kullanılabilir.</li>
+</ul>
+
+<h5>Kullanım Alanı</h5>
+<p>Types Katmanı, genellikle uygulamanın veri tiplerini, modellerini ve belirli nesne yapılarını içerir. Bu katman, veri
+  yapılarını standartlaştırarak ve belirli veri tiplerini tanımlayarak uygulama içindeki veri işleme süreçlerini ve veri
+  akışını kolaylaştırır.</p>
+
+<h4>Constants Katmanı</h4>
+
+<h5>Constants Katmanının Özellikleri:</h5>
+<ul>
+  <li><strong>Sabit Değer Tanımlama:</strong> Constant katmanı, uygulamanızın herhangi bir yerinde kullanılmak üzere
+    sabit değerlerin tanımlanması için kullanılır.</li>
+  <li><strong>NgModule İçinde Kullanım:</strong> Tanımlanan constantlar, uygulamanın farklı bileşenleri arasında
+    paylaşılabilir.</li>
+  <li><strong>ReadOnly Değerler:</strong> Constantlar genellikle readOnly (salt okunur) olarak tanımlanır ve
+    değiştirilemez.</li>
+  <li><strong>Dependency Injection ile Kullanım:</strong> Constant değerler, Angular'ın dependency injection mekanizması
+    ile farklı bileşenlere enjekte edilebilir.</li>
+  <li><strong>Genel Ayarlar ve Sabitler:</strong> Uygulamanın genelinde kullanılacak ayarlar veya sabitler bu katman
+    içinde tanımlanabilir.</li>
+</ul>
+
+<p>Constant katmanı, Angular uygulamalarında genellikle sabit değerlerin merkezi bir şekilde yönetilmesini sağlar ve bu
+  değerlerin kolayca erişilmesini ve kullanılmasını mümkün kılar.</p>
+
+
+<h4>Assets Katmanı</h4>
+
+<h5>Amaç</h5>
+<p>Bu katman, genellikle bir uygulamanın arayüzünü veya içeriğini oluşturan görseller, fontlar, CSS dosyaları,
+  JavaScript dosyaları gibi statik dosyaları veya kaynakları içerir.</p>
+
+<h5>İşlevi</h5>
+<ul>
+  <li><strong>Görseller ve Grafikler:</strong> Uygulamanın kullanacağı görseller, ikonlar, arka planlar gibi görsel
+    kaynakları içerir.</li>
+  <li><strong>Fontlar:</strong> Uygulamanın kullanacağı font dosyalarını içerir.</li>
+  <li><strong>Stil Dosyaları (CSS) ve Betik Dosyaları (JavaScript):</strong> Uygulamanın stilini düzenleyen CSS
+    dosyaları veya interaktif özellikler sağlayan JavaScript dosyalarını içerir.</li>
+</ul>
+
+<h5>Kullanım Alanı</h5>
+<p>Assets Katmanı, genellikle bir uygulamanın arayüzünü oluşturan statik dosyaları içerir. Bu dosyalar, genellikle
+  görseller, fontlar, stil dosyaları ve betik dosyaları gibi kaynakları depolar. Bu kaynaklar, uygulamanın görünümünü ve
+  işlevselliğini destekler.</p>

@@ -1,0 +1,13 @@
+# Uygulama Adı - Core Katmanı
+
+## Amaç
+Bu katman, uygulamanın temel işleyişini sağlayan yapısal bileşenlerin bulunduğu kısımdır. Genel işlevleri desteklemek amacıyla yetkilendirme, yönlendirme, uygulama durumu gibi servisleri içerir.
+
+## İşlevi
+- **Yetkilendirme ve Yönlendirme:** Genellikle kullanıcı yetkilendirme işlemlerini, sayfa yönlendirmelerini sağlar.
+- **Uygulama Durumu:** Uygulama genelindeki durumu tutmak, yönetmek için kullanılır.
+- **Ortak Öğeler:** Veri depolama, API iletişimi gibi ortak öğeleri içerir. Bu öğeler, uygulamanın farklı bölümlerinde yaygın olarak kullanılır.
+- **Temel Bileşenler:** Uygulamanın çekirdeğini oluşturan yapısal bileşenleri içerir. Bu bileşenler, uygulamanın genel yapısını belirler.
+
+## Kullanım Alanı
+Core Katmanı, uygulamanın genel yapısını oluşturur ve işlevsel temel bileşenleri barındırır. Bu katman, uygulamanın temel yapısal bileşenlerini içerir ve genellikle diğer katmanlarla etkileşim halindedir.

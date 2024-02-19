@@ -1,0 +1,34 @@
+<h4>onNavigate </h4>
+<p>Angular'da doğrudan bir onNavigate özelliği bulunmamaktadır. Ancak, Angular içinde yönlendirme işlemlerini izlemek ve
+  bu değişikliklere tepki vermek için Router servisi ve yönlendirme olayları kullanılır. Bunlar, uygulama içindeki sayfa
+  geçişlerini takip etmek ve yönlendirmelerle ilgili işleri gerçekleştirmek için kullanılır. İşte Router ile yönlendirme
+  olaylarına odaklanan bazı noktalar:</p>
+
+<ul>
+  <li>Router Modülü ve İçe Aktarma: Angular'da yönlendirme işlemlerini kullanabilmek için @angular/router modülünü
+    projeye dahil etmek gerekir. Bu modülü, Router servisini ve yönlendirme olaylarını içeren gerekli yapıları içerir.
+  </li>
+  <li>Router Olayları:
+    <ul>
+      <li>NavigationStart: Yönlendirme işlemi başladığında tetiklenir.</li>
+      <li>NavigationEnd: Yönlendirme işlemi başarıyla tamamlandığında tetiklenir.</li>
+      <li>NavigationCancel: Yönlendirme işlemi iptal edildiğinde tetiklenir.</li>
+      <li>NavigationError: Yönlendirme sırasında bir hata oluştuğunda tetiklenir.</li>
+    </ul>
+  </li>
+  <li>Router Servisi Kullanımı: Router servisi, yönlendirme işlemlerini yönetmek ve olaylarını takip etmek için
+    kullanılır. Örneğin, Router servisini bileşen içine enjekte ederek yönlendirme olaylarını dinleyebilir ve bu
+    olaylara göre işlemler gerçekleştirebilirsiniz.</li>
+  <li>Router Guard'lar: Angular, belirli sayfalara erişimi kontrol etmek ve yönlendirmeleri engellemek için Router
+    Guard'lar sağlar. Bu, sayfa geçişleri öncesinde belirli kontroller yapılmasını sağlar ve yönlendirme öncesinde iş
+    mantığı eklenmesine olanak tanır.</li>
+</ul>
+
+<p>Bu özellikler ve yapılar, Angular uygulamalarında sayfa yönlendirmelerini izlemek, yönetmek ve bu değişikliklere
+  tepki vermek için kullanılır. Yönlendirme olayları, kullanıcıların uygulama içindeki sayfalar arasında gezinirken veya
+  sayfa yüklemeleri sırasında gerçekleşen olaylardır ve bu olaylara Angular içindeki bileşenler veya servisler üzerinden
+  tepki verilebilir.</p>
+
+<b>Kod örneği</b><br>
+<!-- HTML de a link kullanmak için RouterModule modülü importa ekle -->
+<button class="btn btn-primary" (click)="navigateToHome()">Home</button> Ya da <b><a routerLink="/">Home</a></b>

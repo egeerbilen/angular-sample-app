@@ -1,0 +1,84 @@
+<h4>
+    Url Get Id
+</h4>
+Url den alınan id değeri: {{ itemId }}
+<br><br>
+
+<b>Ek Bilgi:</b>
+
+<p>Bu aboneliği observables kullanarak kurduk . Angular Şöyle ki, bu bileşende kurduğunuz aboneliği, bileşen yok edildiğinde temizler.</p>
+
+<p>Neden önemli? Çünkü diyelim ki parametre değişikliklerine abone oldunuz, sonra bu bileşenden ayrıldınız ve daha sonra geri döndünüz. İşte, bileşeniniz ayrıldıktan sonra bellekte bu abonelik hep var olacak, çünkü bu abonelik bileşeninizle sıkıca bağlı
+    değil.
+</p>
+
+<p>Angular bu aboneliği yok etme işlemini sizin için hallediyor. Ama teorik olarak, ngOnDestroy Lifecycle Hook'u uygulamak isteyebilirsiniz. Bunun için Angular Core'dan bunu içe aktarmalısınız. Böylece ngOnDestroy'i uygularsınız.
+</p>
+
+<p>Şimdi bu parametre aboneliği özelliği, Subscribe çağrısını yaparken kurduğumuz abonelikle bağlantılı hale geldi. Bu Subscribe çağrısı aboneliği döndürür. Ve bir kez bileşen yok edildiğinde, artık bu aboneliğe erişip onu iptal edebiliriz.
+</p>
+<p>
+    Tekrar belirtmek gerekirse, bu yapmanıza gerek yok çünkü Angular, route observables için bunu sizin için hallediyor. Ancak kendi observablleri eklerseniz, bir sonraki observable bölümünde bahsedeceğim, bunları kendiniz iptal etmelisiniz.
+</p>
+
+<div id="section1">
+    <h2>section 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium dolor ex sed incidunt nemo eius aliquid inventore nihil delectus? Placeat ipsa velit, dolorum qui quasi quidem rem nostrum iste?</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="section2">
+    <h2>section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium dolor ex sed incidunt nemo eius aliquid inventore nihil delectus? Placeat ipsa velit, dolorum qui quasi quidem rem nostrum iste?</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="section3">
+    <h2>section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium dolor ex sed incidunt nemo eius aliquid inventore nihil delectus? Placeat ipsa velit, dolorum qui quasi quidem rem nostrum iste?</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="section4">
+    <h2>section 4</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium dolor ex sed incidunt nemo eius aliquid inventore nihil delectus? Placeat ipsa velit, dolorum qui quasi quidem rem nostrum iste?</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

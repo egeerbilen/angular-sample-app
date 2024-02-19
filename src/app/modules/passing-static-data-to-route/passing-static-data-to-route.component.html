@@ -1,0 +1,23 @@
+<h4>
+  Passing Static Data to Route
+</h4>
+
+<p>Angular'da, bir rotaya statik veri iletimi, belirli bir bileşenin içeriğini veya görünümünü güncellemek için
+  kullanılır. Bir rotaya önceden belirlenmiş veriyi iletmek:</p>
+
+<ul>
+  <li>Bileşenlere önceden tanımlanmış veriler sağlar.</li>
+  <li>URL üzerinden veya Router servisi kullanılarak aktarılabilir.</li>
+</ul>
+
+<p>Bu özellikleri kullanarak Angular'da rotalara statik veri aktarabilirsiniz.</p>
+<p>Örneğin, bir blog sayfasındaki farklı yazıları göstermek için bir rota oluşturduğunuzu düşünelim. Her yazı farklı bir
+  URL'ye sahip olabilir ve her bir yazının içeriği statik olarak saklanmış olabilir. Bu durumda, Angular rotalarını
+  kullanarak her yazının belirli bir URL'ye karşılık geldiği ve istemciye sunulacak statik verilerin bu rotalarla
+  ilişkilendirildiği bir yapı oluşturabilirsiniz.</p>
+<b>Örnek</b>
+<p>{{ pageTitle }} <br> {{ pageDescription }}</p>
+
+<button class="btn btn-primary" (click)="snapshotChange()">Snapshot Değiştir</button>
+<br><br>
+<p><b>Not: </b>Örnekde ki datalar Route içinde data değeri var bu değerler oradan geliyor</p>

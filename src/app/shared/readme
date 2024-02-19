@@ -1,0 +1,12 @@
+# Shared (Paylaşılan) Katmanı
+
+## Amaç
+Bu katman, farklı bileşenler arasında paylaşılan ve tekrar kullanılabilir bileşenleri içeren bir yapıdır. Genellikle tekrar kullanılabilir ve genel amaçlı bileşenleri barındırır.
+
+## İşlevi
+- **Yeniden Kullanılabilir UI Bileşenleri:** Birden fazla yerde kullanılan kullanıcı arayüzü bileşenlerini içerir (örneğin: butonlar, form alanları, kartlar vb.).
+- **Farklı Bileşenler veya Modüller Arasında Paylaşılan Genel Servisler veya Yardımcı Öğeler:** Bileşenler veya modüller arasında paylaşılan genel servisleri veya yardımcı öğeleri içerir.
+- **Tekrar Kullanılabilir ve Genel Amaçlı Bileşenler:** Genellikle tekrar kullanılabilir ve genel amaçlı bileşenleri barındırır.
+
+## Kullanım Alanı
+Shared Katmanı, farklı bileşenler veya modüller arasında paylaşılan, genel amaçlı bileşenleri ve servisleri barındırır. Bu katman, yeniden kullanılabilir bileşenleri bir araya getirerek tekrarı azaltır ve farklı bölümlerde veya modüllerde kullanılmak üzere genel bileşenleri sağlar.
